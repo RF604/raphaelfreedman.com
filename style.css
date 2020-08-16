@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+
+@font-face {
+  font-family: 'Self Modern';
+  src: url('bretagne_self-modern_text_web.eot');
+  src: url('bretagne_self-modern_text_web.eot?#iefix') format('embedded-opentype'),
+    url('bretagne_self-modern_text_web.woff') format('woff'),
+    url('bretagne_self-modern_text_web.woff2') format('woff2'),
+    url('bretagne_self-modern_text_web.ttf') format('truetype');
+  font-style: normal;
+}
+
+/* PAGE */
+* {
+  box-sizing: border-box;
+  color: #353839;
+  color: black;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 10px;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+main {
+  width: 600px;
+  max-width: 100%;
+  position: fixed;
+  padding: 10px;
+}
+
+main div {
+  margin-bottom: 18px;
+}
+
+aside {
+  width: 600px;
+  max-width: 100%;
+  float: right;
+  padding: 10px;
+  min-height: 100%;
+}
+
+img {
+  object-fit: contain;
+  background-color: #56745D;
+  background-color: #505050;
+
+  padding: 8vmin;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+aside img:first-child {
+  background-color: transparent;
+  object-position: top;
+  padding: 0 0 0 16vmin;
+  min-height: 100vh;
+}
+
+/* TEXT */
+::selection {
+  color: white;
+  background: #353839;
+}
+
+h1,
+p,
+a {
+  padding: 0;
+  margin: 0;
+  text-rendering: optimizeLegibility;
+  font-kerning: normal;
+  text-decoration: none;
+  line-height: 1.4;
+  font-weight: 400;
+  text-align: justify;
+  font-size: 13px;
+  font-family: 'Self Modern', serif;
+}
+
+h1 {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 22px;
+  font-size: 15.4px;
+  text-transform:uppercase;
+  margin-bottom: 6px;
+  letter-spacing: .025em;
+}
+
+p {
+  margin-bottom: 12px;
+}
+p a {
+  text-decoration: underline;
+}
+
+nav a {
+  width: 20px;
+  height: 20px;
+  color: black;
+  border: 1px solid;
+  padding: 2px 8px;
+  border-radius: 0;
+	transition: background-color .15s ease-in-out;
+}
+
+nav a:hover {
+	background-color: gray;
+  color: white;
+}
+
+nav a.selected {
+  background-color: blue;
+  color: white;
+}
+
+
+/* ANIMATIONS */
+img {
+  filter: grayscale(1) brightness(.35);
+  transition: filter 1.2s;
+}
+img.animate {
+  filter: grayscale(0) brightness(1);
+}
+
+/* MOBILE */
+@media screen and (max-width: 1280px) {
+
+  body {
+    padding: 0px;
+  }
+
+  main {
+      display: block;
+      position: relative;
+    }
+
+  main div {
+    margin-bottom: 10px;
+  }
+
+  aside {
+    float: left;
+    padding-top: 0;
+  }
+
+  aside img:first-child {
+    background-color: #505050;
+    object-position: top;
+    padding: 8vmin;
+    min-height: 0;
+  }
+
+  img {
+    margin-bottom: 6px;
+  }
+
+  img:last-of-type {
+    margin: 0;
+  }
+
+  h1,
+  p,
+  a {
+    text-align: ;
+  }
+
+  p {
+    text-align: justify;
+  }
+
+  h1 {
+    margin-bottom: 4px;
+  }
+
+
+}
