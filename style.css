@@ -43,27 +43,31 @@ main div {
 }
 
 aside {
-  width: 600px;
-  max-width: 100%;
   float: right;
-  padding: 10px;
+  width: 660px;
+  max-width: 100%;
   min-height: 100%;
+  padding: 10px;
 }
 
-img {
-  object-fit: contain;
-  background-color: #56745D;
-  background-color: #505050;
+aside section {}
 
-  padding: 8vmin;
+img {
+  display: block;
+  object-fit: contain;
+  object-position: center;
+  background-color: #56745D;
+  background-color: #B0D0CD;
+  background-color: #91A2B3;
+  padding: min(8.5vw, 48px);
   margin-bottom: 20px;
-  width: 100%;
+  max-width: 100%;
 }
 
 aside img:first-child {
   background-color: transparent;
   object-position: top;
-  padding: 0 0 0 16vmin;
+  padding: 0 0 0 18vmin;
   min-height: 100vh;
 }
 
@@ -90,61 +94,82 @@ a {
 
 h1 {
   font-family: 'DM Sans', sans-serif;
-  font-size: 22px;
   font-size: 15.4px;
-  text-transform:uppercase;
-  margin-bottom: 6px;
+  text-transform: uppercase;
+  margin-bottom: .25em;
+  letter-spacing: .025em;
+}
+
+aside section div {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+aside section a {
+  float: right;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
   letter-spacing: .025em;
 }
 
 p {
   margin-bottom: 12px;
 }
+
 p a {
   text-decoration: underline;
 }
 
+nav {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
 nav a {
-  width: 20px;
-  height: 20px;
-  color: black;
-  border: 1px solid;
+  width: auto;
+  white-space: nowrap;
+  margin: 0 4px 4px 0;
   padding: 2px 8px;
+  border: 1px solid;
   border-radius: 0;
-	transition: background-color .15s ease-in-out;
+  transition: background-color .15s ease-in-out;
 }
 
 nav a:hover {
-	background-color: gray;
+  background-color: gray;
   color: white;
+  border-color: black;
 }
 
 nav a.selected {
   background-color: blue;
   color: white;
+  border-color: blue;
 }
-
 
 /* ANIMATIONS */
 img {
   filter: grayscale(1) brightness(.35);
   transition: filter 1.2s;
 }
+
 img.animate {
   filter: grayscale(0) brightness(1);
 }
 
-/* MOBILE */
+/* MISC. */
 @media screen and (max-width: 1280px) {
-
   body {
     padding: 0px;
   }
 
   main {
-      display: block;
-      position: relative;
-    }
+    display: block;
+    position: relative;
+  }
 
   main div {
     margin-bottom: 10px;
@@ -183,6 +208,43 @@ img.animate {
   h1 {
     margin-bottom: 4px;
   }
+}
 
+@media (prefers-color-scheme: dark) {
+  html {
+    background-color: #28272B;
+  }
 
+  * {
+    color: #F5F5F5;
+    border-color: white;
+  }
+
+  ::selection {
+    color: #272524;
+    background: white;
+  }
+
+  img {
+    background-color: #576066;
+  }
+
+  nav a.selected {
+    background-color: #506754;
+    border-color: white;
+  }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  html {
+    background-color: #F3ECDE;
+  }
+
+  main .selected-projects {
+    display: none;
+  }
+
+  aside {
+    display: none;
+  }
 }
