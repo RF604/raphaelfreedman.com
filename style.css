@@ -77,14 +77,19 @@ aside section {
 aside section.gradient {
   height: calc(100vh - 40px);
   background-color: #91A2B3;
+  background-color: transparent;
 
-  /* background-image: url(/images/home-image.png);
-  background-position: center;
+
+/*   background: linear-gradient(to bottom, #ED81BE, #EE7E7E, #F6B46F, #CCE26A); */
+
+
+ background-image: url(/images/sitting.jpeg);
   background-repeat: no-repeat;
-  background-size: contain;
-  background-size: 400px;
-  background: linear-gradient(to bottom, #ED81BE, #EE7E7E, #F6B46F, #CCE26A);
-  */
+  background-position: right;
+  background-size: auto 100%;
+
+
+
 }
 
 aside section span {
