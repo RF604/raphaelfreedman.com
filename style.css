@@ -185,6 +185,7 @@ p a {
   }
   main {
     position: relative;
+    width: 100%;
     padding-bottom: 0;
   }
   main div {
@@ -227,6 +228,7 @@ p a {
 
   p {
     text-align: justify;
+    max-width: 600px;
   }
   h1 {
     margin-bottom: 4px;
