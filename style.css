@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap');
 @font-face {
   font-family: 'Self Modern';
   src: url('bretagne_self-modern_text_web.eot');
@@ -46,6 +46,8 @@ nav {
 nav a {
   width: auto;
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   margin: 0 4px 4px 0;
   padding: 2px 8px;
   border: 1px solid;
@@ -84,6 +86,7 @@ aside section a {
   font-size: 11px;
   letter-spacing: .025em;
   padding-left: 20px;
+  font-weight: 400;
 }
 aside section div {
   display: grid;
@@ -97,7 +100,7 @@ img {
   background-color: #91A2B3;
   width: 100%;
   height: min(calc(50vh - 46px), 600px);
-  padding: min(8.5vw, 40px);
+  padding: min(8.5vmin, 60px) min(8.5vmin, 40px);
 
   filter: grayscale(1) brightness(.35);
   transition: filter 1.2s;
@@ -126,9 +129,10 @@ a {
 }
 h1 {
   font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
   font-size: 15.4px;
   margin-bottom: .25em;
-  letter-spacing: .025em;
+  letter-spacing: .022em;
 }
 p {
   margin-bottom: 12px;
@@ -151,7 +155,12 @@ p a {
   }
   main div:last-of-type {
     padding-bottom: 20px;
-    border-bottom: 1px dashed;
+  }
+  nav a:hover,
+  nav a.selected {
+    background-color: transparent;
+    color: #353839;
+    border-color: #353839;
   }
 
   aside {
@@ -160,11 +169,24 @@ p a {
     margin: -6px 0 0 0;
     padding-top: 0;
   }
+  aside section:first-of-type {
+    border-top: 1px dashed;
+  }
   aside section span {
     justify-content: space-between;
+    margin-top: 20px;
   }
+  aside section span:first-of-type {
+    margin-top: 36px;
+  }
+
   aside section a {
     padding-left: 0;
+  }
+  aside section div {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
   }
 
   p {
@@ -172,6 +194,12 @@ p a {
   }
   h1 {
     margin-bottom: 4px;
+    text-align: left;
+  }
+}
+@media screen and (max-width: 600px) {
+  aside section div img:nth-child(n+3){
+    display: none;
   }
 }
 @media (prefers-color-scheme: dark) {
