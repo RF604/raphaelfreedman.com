@@ -74,22 +74,20 @@ aside section {
   margin-bottom: 10px;
 }
 
-aside section.gradient {
+aside section:first-of-type {
   height: calc(100vh - 40px);
-  background-color: #91A2B3;
-  background-color: transparent;
+  padding-top: 0;
+  /*   background: linear-gradient(to bottom, #ED81BE, #EE7E7E, #F6B46F, #CCE26A); */
+}
 
-
-/*   background: linear-gradient(to bottom, #ED81BE, #EE7E7E, #F6B46F, #CCE26A); */
-
-
- background-image: url(/images/sitting.jpeg);
-  background-repeat: no-repeat;
-  background-position: right;
-  background-size: auto 100%;
-
-
-
+aside section:first-of-type img {
+  height: 100%;
+  width: auto;
+  max-width: 100%;
+  object-fit: cover;
+  float: right;
+  padding: 0;
+  margin: 0;
 }
 
 aside section span {
