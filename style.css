@@ -183,18 +183,17 @@ p a {
     margin: -6px 0 0 0;
     padding-top: 0;
   }
-  aside section:first-of-type {
-    border-top: 1px dashed;
+  aside section.gradient {
+    display: none;
   }
   aside section span {
     justify-content: space-between;
     margin-top: 20px;
   }
   aside section span:first-of-type {
-    margin-top: 36px;
+    margin-top: 6px;
   }
-
-  aside section a {
+  aside section span a {
     padding-left: 0;
   }
   aside section div {
@@ -212,6 +211,10 @@ p a {
   }
 }
 @media screen and (max-width: 600px) {
+  main div:last-of-type {
+    padding-bottom: 20px;
+    border-bottom: 1px dashed;
+  }
   aside section div img:nth-child(n+3){
     display: none;
   }

@@ -19,6 +19,7 @@ const navObserver = new IntersectionObserver(entries => {
 }, {
   threshold: [0, 0.25, 0.5, 0.75, 1]
 })
+
 sections.forEach(section => {
   navObserver.observe(section)
 })
