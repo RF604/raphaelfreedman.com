@@ -1,8 +1,8 @@
 const navLinks = document.querySelectorAll("nav a")
-const sections = document.querySelectorAll("aside section h1")
+const sections = document.querySelectorAll("aside section")
 const navObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
-    if (entry.intersectionRatio > 0.1) {
+    if (entry.intersectionRatio >= 0.50) {
       sections.forEach((section, index) => {
         if (entry.target == section) {
           navLinks.forEach((link, i) => {
@@ -17,7 +17,7 @@ const navObserver = new IntersectionObserver(entries => {
     }
   })
 }, {
-  threshold: [0, 0.1, 0.9, 1]
+  threshold: [0, 0.25, 0.5, 0.75, 1]
 })
 sections.forEach(section => {
   navObserver.observe(section)

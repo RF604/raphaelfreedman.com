@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
-
 @font-face {
   font-family: 'Self Modern';
   src: url('bretagne_self-modern_text_web.eot');
@@ -10,24 +9,22 @@
   font-style: normal;
 }
 
-/* PAGE */
+
 * {
   box-sizing: border-box;
   color: #353839;
   color: black;
 }
-
 html {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
 }
-
 body {
   width: 100%;
+  max-width: 1900px;
   margin: 0;
   padding: 10px;
-  min-height: 100vh;
   overflow-x: hidden;
 }
 
@@ -37,48 +34,82 @@ main {
   position: fixed;
   padding: 10px;
 }
-
 main div {
   margin-bottom: 18px;
 }
 
+nav {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+nav a {
+  width: auto;
+  white-space: nowrap;
+  margin: 0 4px 4px 0;
+  padding: 2px 8px;
+  border: 1px solid;
+  border-radius: 0;
+  transition: background-color .15s ease-in-out;
+}
+nav a:hover,
+nav a.selected {
+  background-color: #91A2B3;
+  color: white;
+  border-color: #91A2B3;
+}
+
 aside {
   float: right;
-  width: 660px;
-  max-width: 100%;
-  min-height: 100%;
+  width: calc(100% - 620px);
+  max-width: 1280px;
+  height: 100vh;
+  margin-top: 100vh;
   padding: 10px;
 }
 
 aside section {
-  max-width: 600px;
-  margin: 0 auto;
+  margin-bottom: 23px;
+}
+aside section span {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  margin-bottom: 4px;
+}
+aside section a {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  letter-spacing: .025em;
+  padding-left: 20px;
+}
+aside section div {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  grid-gap: 20px;
 }
 
 img {
-  display: block;
   object-fit: contain;
   object-position: center;
   background-color: #91A2B3;
-  padding: min(8.5vw, 48px);
-  margin-bottom: 20px;
-  max-width: 100%;
+  width: 100%;
+  height: min(calc(50vh - 46px), 600px);
+  padding: min(8.5vw, 40px);
+
+  filter: grayscale(1) brightness(.35);
+  transition: filter 1.2s;
+}
+img.animate {
+  filter: grayscale(0) brightness(1);
 }
 
-aside img:first-child {
-  background-color: transparent;
-  object-position: top;
-  padding: 0 0 0 18vmin;
-  min-height: 100vh;
-
-}
-
-/* TEXT */
 ::selection {
   color: white;
   background: #353839;
 }
-
 h1,
 p,
 a {
@@ -93,122 +124,56 @@ a {
   font-size: 13px;
   font-family: 'Self Modern', serif;
 }
-
 h1 {
   font-family: 'DM Sans', sans-serif;
   font-size: 15.4px;
   margin-bottom: .25em;
   letter-spacing: .025em;
 }
-
-aside section div {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-top: 40px;
-  margin-bottom: 4px;
-}
-
-aside section a {
-  float: right;
-  font-family: 'DM Sans', sans-serif;
-  font-size: 11px;
-  letter-spacing: .025em;
-}
-
 p {
   margin-bottom: 12px;
 }
-
 p a {
   text-decoration: underline;
 }
 
-nav {
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-}
 
-nav a {
-  width: auto;
-  white-space: nowrap;
-  margin: 0 4px 4px 0;
-  padding: 2px 8px;
-  border: 1px solid;
-  border-radius: 0;
-  transition: background-color .15s ease-in-out;
-}
-
-nav a:hover,
-nav a.selected {
-  background-color: #91A2B3;
-  color: white;
-  border-color: #91A2B3;
-}
-
-/* ANIMATIONS */
-img {
-  filter: grayscale(1) brightness(.35);
-  transition: filter 1.2s;
-}
-
-img.animate {
-  filter: grayscale(0) brightness(1);
-}
-
-/* MISC. */
 @media screen and (max-width: 1280px) {
   body {
     padding: 0px;
   }
-
   main {
-    display: block;
     position: relative;
-    min-height: 100vh;
-
-    margin: 0 auto;
+    padding-bottom: 0;
   }
-
   main div {
     margin-bottom: 10px;
   }
+  main div:last-of-type {
+    padding-bottom: 20px;
+    border-bottom: 1px dashed;
+  }
 
   aside {
+    width: 100%;
     float: none;
-    margin: 0 auto;
+    margin: -6px 0 0 0;
     padding-top: 0;
   }
-
-  aside img:first-child {
-    display: none;
+  aside section span {
+    justify-content: space-between;
   }
-
-  img {
-    margin-bottom: 6px;
-  }
-
-  img:last-of-type {
-    margin: 0;
-  }
-
-  h1,
-  p,
-  a {
-    text-align: ;
+  aside section a {
+    padding-left: 0;
   }
 
   p {
     text-align: justify;
   }
-
   h1 {
     margin-bottom: 4px;
   }
 }
-
 @media (prefers-color-scheme: dark) {
   html {
     background-color: #28272B;
@@ -233,7 +198,6 @@ img.animate {
     border-color: white;
   }
 }
-
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   html {
     background-color: #F3ECDE;
