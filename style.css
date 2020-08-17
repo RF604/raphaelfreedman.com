@@ -24,9 +24,9 @@ html {
 }
 
 body {
+  width: 100%;
   margin: 0;
   padding: 10px;
-  width: 100%;
   min-height: 100vh;
   overflow-x: hidden;
 }
@@ -50,14 +50,15 @@ aside {
   padding: 10px;
 }
 
-aside section {}
+aside section {
+  max-width: 600px;
+  margin: 0 auto;
+}
 
 img {
   display: block;
   object-fit: contain;
   object-position: center;
-  background-color: #56745D;
-  background-color: #B0D0CD;
   background-color: #91A2B3;
   padding: min(8.5vw, 48px);
   margin-bottom: 20px;
@@ -69,6 +70,7 @@ aside img:first-child {
   object-position: top;
   padding: 0 0 0 18vmin;
   min-height: 100vh;
+
 }
 
 /* TEXT */
@@ -95,7 +97,6 @@ a {
 h1 {
   font-family: 'DM Sans', sans-serif;
   font-size: 15.4px;
-  text-transform: uppercase;
   margin-bottom: .25em;
   letter-spacing: .025em;
 }
@@ -104,13 +105,15 @@ aside section div {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  margin-bottom: 4px;
 }
 
 aside section a {
   float: right;
   font-family: 'DM Sans', sans-serif;
   font-size: 11px;
-  text-transform: uppercase;
   letter-spacing: .025em;
 }
 
@@ -138,16 +141,11 @@ nav a {
   transition: background-color .15s ease-in-out;
 }
 
-nav a:hover {
-  background-color: gray;
-  color: white;
-  border-color: black;
-}
-
+nav a:hover,
 nav a.selected {
-  background-color: blue;
+  background-color: #91A2B3;
   color: white;
-  border-color: blue;
+  border-color: #91A2B3;
 }
 
 /* ANIMATIONS */
@@ -169,6 +167,9 @@ img.animate {
   main {
     display: block;
     position: relative;
+    min-height: 100vh;
+
+    margin: 0 auto;
   }
 
   main div {
@@ -176,15 +177,13 @@ img.animate {
   }
 
   aside {
-    float: left;
+    float: none;
+    margin: 0 auto;
     padding-top: 0;
   }
 
   aside img:first-child {
-    background-color: #505050;
-    object-position: top;
-    padding: 8vmin;
-    min-height: 0;
+    display: none;
   }
 
   img {
