@@ -114,8 +114,8 @@ aside section div {
 footer {
   display: flex;
   justify-content: space-between;
-  border-top: ;
-  padding: 0 0 0 0;
+  align-items: baseline;
+  padding: 0;
   margin: 20px 0 6px 0;
 }
 
@@ -160,13 +160,11 @@ h1 {
   margin-bottom: .25em;
   letter-spacing: .022em;
 }
-h3 {
+footer small {
   font-family: 'DM Sans', sans-serif;
   font-weight: 400;
   font-size: 11px;
   letter-spacing: .022em;
-  padding: 0;
-  margin: 0;
 }
 
 p {
