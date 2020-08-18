@@ -42,17 +42,15 @@ nav {
   flex-direction: column;
 }
 nav a {
-  width: auto;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-top: 1px solid;
   margin: 0;
   padding: 6px 0px;
-  border-top: 1px solid;
-  border-radius: 0;
   transition: .15s ease-in-out;
-  transition-property: padding-left, background-color;
-
+  transition-property: padding-left, padding-right, background-color;
+  cursor: pointer;
 }
 
 nav a:last-of-type {
@@ -63,7 +61,7 @@ nav a:hover,
 nav a.selected {
   background-color: #A3B2C1;
   border-color: black;
-  padding-left: 10px;
+  padding-left: 8px;
 }
 
 aside {
@@ -101,12 +99,8 @@ aside section span {
   margin-top: 0px;
   margin-bottom: 4px;
 }
-aside section span a {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 11px;
-  letter-spacing: .025em;
+aside section span small {
   padding-left: 20px;
-  font-weight: 400;
 }
 aside section div {
   display: grid;
@@ -142,6 +136,7 @@ img.animate {
   background: #353839;
 }
 h1,
+h2,
 p,
 a {
   padding: 0;
@@ -162,13 +157,12 @@ h1 {
   margin-bottom: .25em;
   letter-spacing: .022em;
 }
-footer small {
+small {
   font-family: 'DM Sans', sans-serif;
   font-weight: 400;
   font-size: 11px;
   letter-spacing: .022em;
 }
-
 p {
   margin-bottom: 12px;
 }
