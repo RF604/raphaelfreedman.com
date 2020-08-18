@@ -7,6 +7,7 @@
     url('bretagne_self-modern_text_web.woff2') format('woff2'),
     url('bretagne_self-modern_text_web.ttf') format('truetype');
   font-style: normal;
+  font-display: swap;
 }
 
 
