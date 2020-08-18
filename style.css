@@ -126,7 +126,6 @@ footer {
 img {
   object-fit: contain;
   object-position: center;
-  background-color: #91A2B3;
   background-color: #A3B2C1;
   width: 100%;
   height: min(calc(50vh - 46px), 600px);
@@ -181,7 +180,7 @@ p a {
 
 @media screen and (max-width: 1280px) {
   body {
-    padding: 0px;
+    padding: 14px 0 0 0;
   }
   main {
     position: relative;
@@ -189,7 +188,7 @@ p a {
     padding-bottom: 0;
   }
   main div {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
   main div:last-of-type {
     padding-bottom: 20px;
@@ -236,38 +235,62 @@ p a {
   }
 }
 @media screen and (max-width: 600px) {
-  main div:last-of-type {
-    padding-bottom: 20px;
-    border-bottom: 1px dashed;
+  html {
+    background-color: #F9F9F9;
   }
-  aside section div img:nth-child(n+3){
+
+  main div:last-of-type {
+    padding-bottom: 0px;
+    border-bottom: 0px dashed;
+  }
+  main div.selected-projects {
     display: none;
   }
+
+  aside section {
+    padding-top: 4px;
+  }
+  aside section div img:nth-child(n+2){
+    display: none;
+  }
+  aside section span h1 {
+    display: none;
+  }
+  aside section span a {
+    padding: 0 8px;
+  }
+  aside section span:after,
+  aside section span:before {
+    content: '';
+    line-height: 0;
+    margin-top: -4px;
+    padding-bottom: 2px;
+    border-top: 1px dotted;
+    flex-grow: 1;
+  }
+
+  footer {
+    margin: 0;
+  }
+
 }
 @media (prefers-color-scheme: dark) {
   html {
     background-color: #28272B;
   }
-
   * {
-    color: #F5F5F5;
-    border-color: white;
+    color: #B3C4DE;
+    color: #E8EBF1;
   }
-
   ::selection {
-    color: #272524;
-    background: white;
+    color: black;
+    background: #B3C4DE;
   }
-
   img {
-    background-color: #576066;
-  }
-
-  nav a.selected {
-    background-color: #506754;
-    border-color: white;
+    background-color: #B3C4DE;
   }
 }
+
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   html {
     background-color: #F3ECDE;
