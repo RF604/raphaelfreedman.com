@@ -129,6 +129,7 @@ img {
   background-color: #A3B2C1;
   width: 100%;
   height: min(calc(50vh - 46px), 600px);
+  min-height: 300px;
   padding: min(8.5vmin, 60px) min(8.5vmin, 40px);
 
   filter: grayscale(1) brightness(.35);
