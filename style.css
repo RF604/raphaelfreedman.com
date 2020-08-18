@@ -29,10 +29,10 @@ body {
 }
 
 main {
-  width: 600px;
-  max-width: 100%;
+  width: 45%;
+  max-width: 710px;
   position: fixed;
-  padding: 10px;
+  padding: 10px 20px 10px 10px;
 }
 main div {
   margin-bottom: 18px;
@@ -69,8 +69,7 @@ nav a.selected {
 
 aside {
   float: right;
-  width: calc(100% - 620px);
-  max-width: 1280px;
+  width: max(55%, calc(100% - 710px));
   padding: 10px;
 }
 aside section {
@@ -179,14 +178,15 @@ p a {
 }
 
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1080px) {
   body {
-    padding: 14px 0 0 0;
+    padding: 12px;
   }
   main {
     position: relative;
     width: 100%;
-    padding-bottom: 0;
+    max-width: 100%;
+    padding: 10px 10px 0 10px;
   }
   main div {
     margin-bottom: 20px;
@@ -213,6 +213,7 @@ p a {
   aside section span {
     justify-content: space-between;
     margin-top: 20px;
+    padding-bottom: 4px;
   }
   aside section span:first-of-type {
     margin-top: 6px;
@@ -223,12 +224,12 @@ p a {
   aside section div {
     display: grid;
     grid-template-columns: 1fr;
-    grid-gap: 10px;
+    grid-gap: 24px;
   }
 
   p {
     text-align: justify;
-    max-width: 600px;
+    max-width: 100%;
   }
   h1 {
     margin-bottom: 4px;
@@ -238,6 +239,9 @@ p a {
 @media screen and (max-width: 600px) {
   html {
     background-color: #F9F9F9;
+  }
+  body {
+    padding: 6px;
   }
 
   main div:last-of-type {
