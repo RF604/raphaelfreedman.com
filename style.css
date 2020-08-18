@@ -1,11 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap');
 @font-face {
   font-family: 'Self Modern';
-  src: url('bretagne_self-modern_text_web.eot');
-  src: url('bretagne_self-modern_text_web.eot?#iefix') format('embedded-opentype'),
-    url('bretagne_self-modern_text_web.woff') format('woff'),
+  src:
     url('bretagne_self-modern_text_web.woff2') format('woff2'),
-    url('bretagne_self-modern_text_web.ttf') format('truetype');
+    url('bretagne_self-modern_text_web.woff') format('woff');
   font-style: normal;
   font-display: swap;
 }
