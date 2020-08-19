@@ -22,15 +22,16 @@ html {
 }
 
 body {
-  width: 100%;
-  max-width: 1600px;
+  width: 1600px;
+  max-width: 100%;
   margin: 0 auto;
   padding: 0;
   overflow-x: hidden;
 }
 
 main {
-  max-width: 50%;
+  width: 50%;
+  max-width: 800px;
   min-height: 100%;
   position: fixed;
   padding: 20px;
@@ -81,7 +82,9 @@ nav a.selected {
 aside {
   float: right;
   width: 50%;
+  max-width: 800px;
   padding: 0;
+  margin: 0;
 }
 
 aside section {
@@ -207,8 +210,8 @@ p a {
 @media all and (max-width: 1080px) {
   main {
     position: relative;
-    min-width: 100%;
-    padding: 20px;
+    width: 100%;
+    max-width: 100%;
   }
 
   main div {
@@ -229,6 +232,7 @@ p a {
 
   aside {
     width: 100%;
+    max-width: 100%;
     float: none;
   }
 
