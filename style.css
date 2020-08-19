@@ -10,7 +10,6 @@
 
 * {
   box-sizing: border-box;
-  color: #353839;
   color: black;
 }
 html {
@@ -126,8 +125,7 @@ img.animate {
 }
 
 ::selection {
-  color: white;
-  background: #353839;
+  background: #E7FB47;
 }
 h1,
 h2,
@@ -141,20 +139,20 @@ a {
   line-height: 1.4;
   font-weight: 400;
   text-align: justify;
-  font-size: 14px;
+  font-size: 17px;
   font-family: 'Self Modern', serif;
 }
 h1 {
   font-family: 'DM Sans', sans-serif;
   font-weight: 500;
-  font-size: 17.5px;
+  font-size: 21.25px;
   margin-bottom: .25em;
   letter-spacing: .022em;
 }
 small {
   font-family: 'DM Sans', sans-serif;
   font-weight: 400;
-  font-size: 11.2px;
+  font-size: 13.6px;
   letter-spacing: .022em;
 }
 p {
@@ -276,19 +274,19 @@ p a {
   h2,
   p,
   a {
-    font-size: 12px;
+    font-size: 13px;
   }
   h1 {
     font-family: 'DM Sans', sans-serif;
     font-weight: 500;
-    font-size: 15px;
+    font-size: 16.25px;
     margin-bottom: .25em;
     letter-spacing: .022em;
   }
   small {
     font-family: 'DM Sans', sans-serif;
     font-weight: 400;
-    font-size: 9.6px;
+    font-size: 10.4px;
     letter-spacing: .022em;
   }
   p {
