@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap');
+
 @font-face {
   font-family: 'Self Modern';
   src:
@@ -12,34 +13,48 @@
   box-sizing: border-box;
   color: black;
 }
+
 html {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
 }
+
 body {
   width: 100%;
-  max-width: 2000px;
+  max-width: 1600px;
   margin: 0 auto;
-  padding: 10px;
+  padding: 0;
   overflow-x: hidden;
 }
 
 main {
-  width: 45%;
-  max-width: 710px;
+  max-width: 50%;
+  min-height: 100%;
   position: fixed;
-  padding: 10px 20px 10px 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+
 main div {
+  width: 100%;
+  max-width: 700px;
   margin-bottom: 18px;
+}
+
+main div:last-of-type {
+  margin-bottom: 0;
 }
 
 nav {
   display: flex;
   flex-direction: column;
 }
+
 nav a {
   display: flex;
   justify-content: space-between;
@@ -65,29 +80,38 @@ nav a.selected {
 
 aside {
   float: right;
-  width: max(55%, calc(100% - 710px));
-  padding: 10px;
+  width: 50%;
+  padding: 0;
 }
+
 aside section {
-  padding-top: 20px;
-  margin-bottom: 10px;
-}
-aside section:first-of-type {
-  height: calc(100vh - 40px);
-  padding-top: 0;
-}
-aside section:first-of-type img {
+  padding: 20px;
+  margin: 0;
+  max-width: 100%;
   height: 100%;
-  width: 100%;
+}
+
+aside section:first-of-type {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+aside section:first-of-type img {
+  height: 620px;
+  max-height: 90vh;
+  width: auto;
   object-fit: cover;
   padding: 0;
   margin: 0;
-
   background-image: url(/images/sutro.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: right;
 }
+
 aside section span {
   display: flex;
   align-items: baseline;
@@ -96,6 +120,7 @@ aside section span {
   margin-top: 0px;
   margin-bottom: 4px;
 }
+
 aside section#switzer span small:after,
 aside section#upstage span small:after {
   content: '[under development]';
@@ -103,17 +128,19 @@ aside section#upstage span small:after {
   padding-left: .75em;
   color: #A3B2C1;
 }
+
 aside section div {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  grid-template-columns: 1fr;
   grid-gap: 20px;
 }
+
 footer {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  padding: 0;
-  margin: 20px 0 6px 0;
+  margin: 0 20px 6px 20px;
 }
 
 img {
@@ -121,13 +148,16 @@ img {
   object-position: center;
   background-color: #A3B2C1;
   width: 100%;
-  height: min(calc(50vh - 46px), 600px);
-  min-height: 300px;
-  padding: min(8.5vmin, 60px) min(8.5vmin, 40px);
-
+  min-height: 400px;
+  height: min(56vh, 780px);
+  padding-top: min(8.5vmin, 80px);
+  padding-bottom: min(8.5vmin, 80px);
+  padding-left: 40px;
+  padding-right: 40px;
   filter: grayscale(1) brightness(.35);
   transition: filter 1.2s;
 }
+
 img.animate {
   filter: grayscale(0) brightness(1);
 }
@@ -135,6 +165,7 @@ img.animate {
 ::selection {
   background: #E7FB47;
 }
+
 h1,
 h2,
 p,
@@ -150,6 +181,7 @@ a {
   font-size: 17px;
   font-family: 'Self Modern', serif;
 }
+
 h1 {
   font-family: 'DM Sans', sans-serif;
   font-weight: 500;
@@ -157,70 +189,68 @@ h1 {
   margin-bottom: .25em;
   letter-spacing: .022em;
 }
+
 small {
   font-family: 'DM Sans', sans-serif;
   font-weight: 400;
   font-size: 13.6px;
   letter-spacing: .022em;
 }
+
 p {
   margin-bottom: 12px;
 }
+
 p a {
   text-decoration: underline;
 }
 
-@media screen and (min-width: 2000px), (min-height: 1400px) {
-  body {
-    padding: 12vmin 0;
-  }
-  aside section:first-of-type img {
-    display: none;
-  }
-}
-@media screen and (max-width: 1080px) {
-  body {
-    padding: 12px;
-  }
+@media all and (max-width: 1080px) {
   main {
     position: relative;
-    width: 100%;
-    max-width: 100%;
-    padding: 10px 10px 0 10px;
+    min-width: 100%;
+    padding: 20px;
   }
+
   main div {
     margin-bottom: 20px;
+    max-width: 100%;
   }
+
   main div:last-of-type {
-    padding-bottom: 20px;
+    padding-bottom: 0px;
   }
+
   nav a:hover,
   nav a.selected {
-      background-color: transparent;
-      border-color: black;
-      padding-left: 0px;
+    background-color: transparent;
+    border-color: black;
+    padding-left: 0px;
   }
 
   aside {
     width: 100%;
     float: none;
-    margin: -6px 0 0 0;
-    padding-top: 0;
   }
+
   aside section:first-of-type {
     display: none;
   }
+
   aside section span {
     justify-content: space-between;
     margin-top: 20px;
     padding-bottom: 4px;
   }
+
   aside section span:first-of-type {
     margin-top: 6px;
   }
+
   aside section span a {
     padding-left: 0;
   }
+
   aside section div {
     display: grid;
     grid-template-columns: 1fr;
@@ -231,23 +261,18 @@ p a {
     text-align: justify;
     max-width: 100%;
   }
+
   h1 {
     margin-bottom: 4px;
     text-align: left;
   }
 }
-@media screen and (max-width: 600px) {
+
+@media all and (max-width: 600px) {
   html {
     background-color: #F9F9F9;
   }
-  body {
-    padding: 6px;
-  }
 
-  main div:last-of-type {
-    padding-bottom: 0px;
-    border-bottom: 0px dashed;
-  }
   main div.selected-projects {
     display: none;
   }
@@ -255,19 +280,28 @@ p a {
   aside section {
     padding-top: 4px;
   }
-  aside section div img:nth-child(n+2){
+
+  aside section:first-of-type img {
     display: none;
   }
+
+  aside section div img:nth-child(n+2) {
+    display: none;
+  }
+
   aside section span h1 {
     display: none;
   }
+
   aside section span a {
     padding: 0 8px;
   }
+
   aside section#switzer span small:after,
   aside section#upstage span small:after {
     font-size: 10.4px;
   }
+
   aside section span:after,
   aside section span:before {
     content: '';
@@ -278,16 +312,13 @@ p a {
     flex-grow: 1;
   }
 
-  footer {
-    margin: 0;
-  }
-
   h1,
   h2,
   p,
   a {
     font-size: 13px;
   }
+
   h1 {
     font-family: 'DM Sans', sans-serif;
     font-weight: 500;
@@ -295,45 +326,59 @@ p a {
     margin-bottom: .25em;
     letter-spacing: .022em;
   }
+
   small {
     font-family: 'DM Sans', sans-serif;
     font-weight: 400;
     font-size: 10.4px;
     letter-spacing: .022em;
   }
+
   p {
     margin-bottom: 12px;
   }
+
   p a {
     text-decoration: underline;
   }
 }
-@media (prefers-color-scheme: dark) {
-  html {
-    background-color: #28272B;
-  }
-  * {
-    color: #B3C4DE;
-    color: #E8EBF1;
-  }
-  ::selection {
-    color: black;
-    background: #B3C4DE;
-  }
-  img {
-    background-color: #B3C4DE;
-  }
-}
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  html {
-    background-color: #F3ECDE;
+
+@media all and (max-height: 620px), (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  body {
+    height: 100vh;
   }
 
-  main .selected-projects {
+  main {
+    min-height: 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  main div.selected-projects {
     display: none;
   }
 
   aside {
     display: none;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    background-color: #28272B;
+  }
+
+  * {
+    color: #B3C4DE;
+    color: #E8EBF1;
+  }
+
+  ::selection {
+    color: black;
+    background: #B3C4DE;
+  }
+
+  img {
+    background-color: #B3C4DE;
   }
 }
