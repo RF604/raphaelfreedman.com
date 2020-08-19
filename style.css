@@ -96,6 +96,13 @@ aside section span {
   margin-top: 0px;
   margin-bottom: 4px;
 }
+aside section#switzer span small:after,
+aside section#upstage span small:after {
+  content: '[under development]';
+  font-size: 10.88px;
+  padding-left: .75em;
+  color: #A3B2C1;
+}
 aside section div {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
