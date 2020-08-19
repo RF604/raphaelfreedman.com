@@ -264,6 +264,10 @@ p a {
   aside section span a {
     padding: 0 8px;
   }
+  aside section#switzer span small:after,
+  aside section#upstage span small:after {
+    font-size: 10.4px;
+  }
   aside section span:after,
   aside section span:before {
     content: '';
