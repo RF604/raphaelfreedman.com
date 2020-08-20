@@ -363,6 +363,7 @@ p a {
     min-height: 100%;
     min-width: 100%;
     position: relative;
+    padding: 20px;
   }
 
   main div.selected-projects {
