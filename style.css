@@ -22,20 +22,17 @@ html {
 }
 
 body {
-  width: 1600px;
-  max-width: 100%;
   margin: 0 auto;
   padding: 0;
   overflow-x: hidden;
 }
 
 main {
-  width: 50%;
-  max-width: 800px;
-  min-height: 100%;
-  padding: 40px 20px 40px 40px;
-
   position: fixed;
+  width: 50%;
+  min-height: 100%;
+  padding: 20px 40px;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -44,11 +41,13 @@ main {
 
 main div {
   width: 100%;
-  margin-bottom: 18px;
+  max-width: 700px;
+  margin-bottom: 2em;
 }
 
 main div:last-of-type {
   margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 nav {
@@ -68,34 +67,80 @@ nav a {
   cursor: pointer;
 }
 
+nav a:hover,
+nav a.selected {
+  padding-left: 8px;
+}
+
 nav a:last-of-type {
   border-bottom: 1px solid;
 }
 
-nav a:hover,
-nav a.selected {
-  background-color: #A3B2C1;
-  border-color: black;
-  padding-left: 8px;
+nav a:hover:nth-child(odd),
+nav a.selected:nth-child(odd),
+.project:nth-child(even) img {
+  background-color: #9AA9B8;
 }
+
+nav a:hover:nth-child(even),
+nav a.selected:nth-child(even),
+.project:nth-child(odd) img {
+  background-color: #B8C1B0;
+}
+
+/*
+nav a.lanprop:hover,
+nav a.lanprop.selected,
+.project#lanprop img {
+  background-color: pink;
+}
+
+nav a.bravo:hover,
+nav a.bravo.selected,
+.project#bravo img {
+  background-color: blue;
+}
+
+nav a.upstage:hover,
+nav a.upstage.selected,
+.project#upstage img {
+  background-color: green;
+}
+
+nav a.switzer:hover,
+nav a.switzer.selected,
+.project#switzer img {
+  background-color: red;
+}
+
+nav a.rlg:hover,
+nav a.rlg.selected,
+.project#rlg img {
+  background-color: yellow;
+}
+*/
 
 aside {
   float: right;
   width: 50%;
-  max-width: 800px;
-  padding: 40px 40px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px 40px;
   margin: 0;
 }
 
 aside section {
-  padding: 0 0 40px 0;
+  padding: 20px 0;
   margin: 0;
-  max-width: 100%;
+  width: 100%;
+  max-width: 800px;
   height: 100%;
 }
 
 aside section:first-of-type {
-  height: 100vh;
+  height: calc(100vh - 40px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -112,7 +157,6 @@ aside section:first-of-type img {
   background-image: url(/images/sutro.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: right;
 }
 
 aside section:last-of-type {
@@ -148,12 +192,13 @@ footer {
   align-items: baseline;
   margin: 0;
   padding: 0;
+  width: 100%;
+  max-width: 800px;
 }
 
 img {
   object-fit: contain;
   object-position: center;
-  background-color: #A3B2C1;
   width: 100%;
   min-height: 400px;
   height: min(56vh, 780px);
@@ -193,8 +238,14 @@ h1 {
   font-family: 'DM Sans', sans-serif;
   font-weight: 500;
   font-size: 21.25px;
-  margin-bottom: .25em;
   letter-spacing: .022em;
+  line-height: .8;
+  margin-bottom: .6em;
+}
+
+nav a * {
+  overflow-x: hidden;
+  white-space: nowrap;
 }
 
 small {
@@ -205,7 +256,8 @@ small {
 }
 
 p {
-  margin-bottom: 12px;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 p a {
@@ -289,7 +341,7 @@ p a {
   }
 
   aside section {
-    padding-bottom: 20px;
+    padding: 0 0 20px 0;
   }
 
   aside section:first-of-type img {
