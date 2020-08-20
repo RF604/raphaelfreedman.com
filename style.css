@@ -314,7 +314,7 @@ p a {
   }
 
   main {
-    background-color: pink;
+    padding-top: 1.7rem
   }
 
   main div.selected-projects {
