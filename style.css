@@ -37,6 +37,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
 }
 
 main div {
@@ -79,7 +80,7 @@ nav a:last-of-type {
 nav a:hover:nth-child(odd),
 nav a.selected:nth-child(odd),
 .project:nth-child(even) img {
-  background-color: #9AA9B8;
+  background-color: #D5D5DF;
 }
 
 nav a:hover:nth-child(even),
@@ -177,7 +178,7 @@ aside section#upstage span small:after {
   content: '[under development]';
   font-size: 10.88px;
   padding-left: .75em;
-  color: #A3B2C1;
+  color: #B8B8B8;
 }
 
 aside section div {
@@ -216,6 +217,8 @@ img.animate {
 
 ::selection {
   background: #E7FB47;
+  background-color: black;
+  color: white;
 }
 
 h1,
@@ -231,6 +234,8 @@ a {
   font-weight: 400;
   text-align: justify;
   font-size: 17px;
+
+  font-family: 'DM Sans', sans-serif;
   font-family: 'Self Modern', serif;
 }
 
