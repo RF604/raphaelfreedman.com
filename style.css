@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@350;600&display=swap');
 
-@font-face {
+/* @font-face {
   font-family: 'Self Modern';
   src:
     url('bretagne_self-modern_text_web.woff2') format('woff2'),
@@ -8,6 +8,8 @@
   font-style: normal;
   font-display: swap;
 }
+>> font-family: 'Self Modern', serif;
+*/
 
 * {
   box-sizing: border-box;
@@ -19,6 +21,8 @@ html {
   padding: 0;
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+  font-size: 16px;
+  font-family: 'Work Sans', sans-serif;
 }
 
 body {
@@ -31,7 +35,7 @@ main {
   position: fixed;
   width: 50%;
   min-height: 100%;
-  padding: 20px 40px;
+  padding: 1rem 2rem;
 
   display: flex;
   flex-direction: column;
@@ -42,8 +46,8 @@ main {
 
 main div {
   width: 100%;
-  max-width: 700px;
-  margin-bottom: 2em;
+  max-width: 42rem;
+  margin-bottom: 2rem;
 }
 
 main div:last-of-type {
@@ -62,7 +66,7 @@ nav a {
   align-items: baseline;
   border-top: 1px solid;
   margin: 0;
-  padding: 6px 0px;
+  padding: 0.5rem 0;
   transition: .15s ease-in-out;
   transition-property: padding-left, padding-right, background-color;
   cursor: pointer;
@@ -70,7 +74,7 @@ nav a {
 
 nav a:hover,
 nav a.selected {
-  padding-left: 8px;
+  padding-left: .5rem;
 }
 
 nav a:last-of-type {
@@ -89,38 +93,6 @@ nav a.selected:nth-child(even),
   background-color: #B8C1B0;
 }
 
-/*
-nav a.lanprop:hover,
-nav a.lanprop.selected,
-.project#lanprop img {
-  background-color: pink;
-}
-
-nav a.bravo:hover,
-nav a.bravo.selected,
-.project#bravo img {
-  background-color: blue;
-}
-
-nav a.upstage:hover,
-nav a.upstage.selected,
-.project#upstage img {
-  background-color: green;
-}
-
-nav a.switzer:hover,
-nav a.switzer.selected,
-.project#switzer img {
-  background-color: red;
-}
-
-nav a.rlg:hover,
-nav a.rlg.selected,
-.project#rlg img {
-  background-color: yellow;
-}
-*/
-
 aside {
   float: right;
   width: 50%;
@@ -128,20 +100,21 @@ aside {
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
-  padding: 20px 40px;
+  padding: 1rem 2rem;
   margin: 0;
 }
 
-aside section {
-  padding: 20px 0;
+aside section,
+aside footer {
+  padding: 1rem 0;
   margin: 0;
   width: 100%;
-  max-width: 800px;
+  max-width: 48rem;
   height: 100%;
 }
 
 aside section:first-of-type {
-  height: calc(100vh - 40px);
+  height: calc(100vh - 2rem);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -149,7 +122,7 @@ aside section:first-of-type {
 }
 
 aside section:first-of-type img {
-  height: 640px;
+  height: 38rem;
   max-height: 90vh;
   width: auto;
   object-fit: cover;
@@ -161,7 +134,7 @@ aside section:first-of-type img {
 }
 
 aside section:last-of-type {
-  padding-bottom: 20px;
+  padding-bottom: 1rem;
 }
 
 aside section span {
@@ -169,44 +142,40 @@ aside section span {
   align-items: baseline;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-top: 0px;
-  margin-bottom: 4px;
+  margin-top: 0;
+  margin-bottom: .25rem;
 }
 
 aside section#switzer span small:after,
 aside section#upstage span small:after {
   content: '[under development]';
-  font-size: 10.88px;
-  padding-left: .75em;
-  color: #B8B8B8;
+  font-size: 0.64rem;
+  padding-left: .64rem;
 }
 
 aside section div {
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: 20px;
+  grid-gap: 1rem;
 }
 
-footer {
+aside footer {
+  padding: 0;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  max-width: 800px;
 }
 
 img {
   object-fit: contain;
   object-position: center;
   width: 100%;
-  min-height: 400px;
-  height: min(56vh, 780px);
-  padding-top: min(8.5vmin, 80px);
-  padding-bottom: min(8.5vmin, 80px);
-  padding-left: 40px;
-  padding-right: 40px;
+  min-height: 24rem;
+  height: min(56vh, 46rem);
+  padding-top: min(8.5vmin, 5rem);
+  padding-bottom: min(8.5vmin, 5rem);
+  padding-left: 2rem;
+  padding-right: 2rem;
   filter: grayscale(1) brightness(.35);
   transition: filter 1.2s;
 }
@@ -224,28 +193,25 @@ img.animate {
 h1,
 h2,
 p,
-a {
+a,
+small {
   padding: 0;
   margin: 0;
   text-rendering: optimizeLegibility;
   font-kerning: normal;
   text-decoration: none;
-  line-height: 1.4;
-  font-weight: 400;
   text-align: justify;
-  font-size: 17px;
-
-  font-family: 'DM Sans', sans-serif;
-  font-family: 'Self Modern', serif;
+  line-height: 1.4;
+  font-weight: 350;
+  font-size: 1rem;
 }
 
 h1 {
-  font-family: 'DM Sans', sans-serif;
-  font-weight: 500;
-  font-size: 21.25px;
-  letter-spacing: .022em;
+  font-weight: 600;
+  font-size: 1.25rem;
+  letter-spacing: .02rem;
   line-height: .8;
-  margin-bottom: .6em;
+  margin-bottom: .6rem;
 }
 
 nav a * {
@@ -254,10 +220,7 @@ nav a * {
 }
 
 small {
-  font-family: 'DM Sans', sans-serif;
-  font-weight: 400;
-  font-size: 13.6px;
-  letter-spacing: .022em;
+  font-size: 0.8rem;
 }
 
 p {
@@ -269,35 +232,39 @@ p a {
   text-decoration: underline;
 }
 
-@media all and (max-width: 1140px) {
+@media all and (max-width: 72rem) {
   main {
     position: relative;
     width: 100%;
     max-width: 100%;
-    padding: 20px;
+    padding: 1rem;
   }
 
   main div {
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
     max-width: 100%;
   }
 
   main div:last-of-type {
-    padding-bottom: 0px;
+    padding-bottom: 0;
   }
 
   nav a:hover,
   nav a.selected {
     background-color: transparent;
     border-color: black;
-    padding-left: 0px;
+    padding-left: 0;
   }
 
   aside {
     width: 100%;
     max-width: 100%;
-    padding: 20px;
+    padding: 1rem;
     float: none;
+  }
+
+  aside section {
+    max-width: 100%;
   }
 
   aside section:first-of-type {
@@ -306,12 +273,12 @@ p a {
 
   aside section span {
     justify-content: space-between;
-    margin-top: 20px;
-    padding-bottom: 4px;
+    margin-top: 1rem;
+    padding-bottom: .25rem;
   }
 
   aside section span:first-of-type {
-    margin-top: 6px;
+    margin-top: .35rem;
   }
 
   aside section span a {
@@ -321,7 +288,11 @@ p a {
   aside section div {
     display: grid;
     grid-template-columns: 1fr;
-    grid-gap: 24px;
+    grid-gap: 1rem;
+  }
+
+  footer {
+    max-width: 100%;
   }
 
   p {
@@ -330,15 +301,20 @@ p a {
   }
 
   h1 {
-    margin-bottom: 4px;
+    margin-bottom: .65rem;
     text-align: left;
   }
 
 }
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 40rem) {
   html {
     background-color: #F9F9F9;
+    font-size: 14px;
+  }
+
+  main {
+    background-color: pink;
   }
 
   main div.selected-projects {
@@ -346,7 +322,7 @@ p a {
   }
 
   aside section {
-    padding: 0 0 20px 0;
+    padding: 0 0 1rem 0;
   }
 
   aside section:first-of-type img {
@@ -362,56 +338,22 @@ p a {
   }
 
   aside section span a {
-    padding: 0 8px;
-  }
-
-  aside section#switzer span small:after,
-  aside section#upstage span small:after {
-    font-size: 10.4px;
+    padding: 0 .5rem;
   }
 
   aside section span:after,
   aside section span:before {
     content: '';
     line-height: 0;
-    margin-top: -4px;
-    padding-bottom: 2px;
+    margin-top: .25rem;
+    padding-bottom: .25rem;
     border-top: 1px dotted;
     flex-grow: 1;
   }
 
-  h1,
-  h2,
-  p,
-  a {
-    font-size: 13px;
-  }
-
-  h1 {
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 500;
-    font-size: 16.25px;
-    margin-bottom: .25em;
-    letter-spacing: .022em;
-  }
-
-  small {
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 400;
-    font-size: 10.4px;
-    letter-spacing: .022em;
-  }
-
-  p {
-    margin-bottom: 12px;
-  }
-
-  p a {
-    text-decoration: underline;
-  }
 }
 
-@media all and (max-height: 620px), (-ms-high-contrast: none), (-ms-high-contrast: active) {
+@media all and (max-height: 40rem), (-ms-high-contrast: none), (-ms-high-contrast: active) {
   body {
     height: 100vh;
   }
@@ -420,7 +362,7 @@ p a {
     min-height: 100%;
     min-width: 100%;
     position: relative;
-    padding: 20px;
+    padding: 1rem;
   }
 
   main div.selected-projects {
