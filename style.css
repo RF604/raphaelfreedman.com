@@ -41,7 +41,6 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
 }
 
 main div {
@@ -122,8 +121,8 @@ aside section:first-of-type {
 }
 
 aside section:first-of-type img {
-  height: 38rem;
-  max-height: 90vh;
+  height: 100%;
+  max-height: 40rem;
   width: auto;
   object-fit: cover;
   padding: 0;
