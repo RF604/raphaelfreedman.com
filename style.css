@@ -17,6 +17,7 @@
 }
 
 html {
+  height: 100%;
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
@@ -83,13 +84,13 @@ nav a:last-of-type {
 nav a:hover:nth-child(odd),
 nav a.selected:nth-child(odd),
 .project:nth-child(even) img {
-  background-color: #D5D5DF;
+  background-color: #CECCD1;
 }
 
 nav a:hover:nth-child(even),
 nav a.selected:nth-child(even),
 .project:nth-child(odd) img {
-  background-color: #B8C1B0;
+  background-color: #B0BED9;
 }
 
 aside {
@@ -353,19 +354,40 @@ p a {
 }
 
 @media all and (max-height: 40rem), (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  * {
+    color: white;
+  }
+
+  html {
+    background-color: black;
+  }
+
   body {
-    height: 100vh;
+    min-height: 100%;
   }
 
   main {
-    min-height: 100%;
-    min-width: 100%;
-    position: relative;
+    width: 100%;
+    min-height: 100vh;
     padding: 1rem;
+    display: table-table-cell;
+    text-align: center;
+    vertical-align: middle;
+    margin: 0 auto;
+  }
+
+  main div {
+    margin-bottom: 2rem;
+    max-width: 600px;
   }
 
   main div.selected-projects {
     display: none;
+  }
+
+  h1 {
+    padding-bottom: .6rem;
+    border-bottom: 1px solid;
   }
 
   aside {
