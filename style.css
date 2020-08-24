@@ -365,6 +365,8 @@ p a {
   main {
     padding: 2rem;
     width: 100vw;
+    min-height: 100vh;
+    height: 1px;
     display: flex;
     align-items: center;
     justify-content: center;
