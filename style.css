@@ -358,25 +358,22 @@ p a {
     color: white;
   }
 
-  html {
+  html, body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
     background-color: black;
-    min-height: 100%;
   }
 
   body {
-    height: 100%;
-    width: 100%;
     display: table;
   }
 
   main {
-    width: 100%;
-    min-height: 100%;
-    padding: 1rem;
-    display: table-table-cell;
-    text-align: center;
+    display: table-cell;
     vertical-align: middle;
-    margin: 0 auto;
+    text-align: center;
+    padding: 2rem;
   }
 
   main div {
