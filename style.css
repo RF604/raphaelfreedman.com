@@ -368,7 +368,7 @@ p a {
 
   main {
     width: 100%;
-    min-height: 100vh;
+    min-height: 100%;
     padding: 1rem;
     display: table-table-cell;
     text-align: center;
