@@ -123,7 +123,7 @@ aside section:first-of-type {
 
 aside section:first-of-type img {
   height: 100%;
-  max-height: 40rem;
+  max-height: 38rem;
   width: auto;
   object-fit: cover;
   padding: 0;
