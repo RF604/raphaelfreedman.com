@@ -134,6 +134,11 @@ small {
 
 
 @media all and (max-width: 72rem),(max-height: 40rem) {
+
+  body {
+      flex-direction: column;
+    }
+
   main {
     width: 100%;
     max-width: 100%;
