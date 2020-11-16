@@ -28,7 +28,6 @@ body {
 main,
 aside {
   width: 50vw;
-  height: 100vh;
   padding: 2rem;
   flex-grow: 1;
   display: flex;
