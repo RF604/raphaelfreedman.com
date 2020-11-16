@@ -168,6 +168,7 @@ small {
 
   main {
     padding: 1.25rem;
+    padding-bottom: 0rem;
   }
 
   ul>li>a>span {
