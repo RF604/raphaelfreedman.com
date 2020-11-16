@@ -136,14 +136,18 @@ small {
 
   body {
       flex-direction: column;
+      justify-content: center;
+      background-color: #3A5745;
     }
 
   main {
-    width: 100%;
-    max-width: 100%;
-    justify-content: flex-start;
+    width: calc(100% - 4rem);
     padding: min(2rem, 4vw);
-    border: none;
+    margin: 2rem;
+    flex-grow: 0;
+    border: 2px solid;
+    border-radius: 1.5rem;
+    background-color: white;
   }
 
   section {
@@ -151,8 +155,12 @@ small {
     max-width: 100%;
   }
 
+  ul>li>a:hover {
+    background-color: #E8EBF1;
+  }
+
   section:last-of-type {
-    padding-bottom: 0;
+    margin-bottom: 0;
   }
 
   aside {
@@ -170,9 +178,16 @@ small {
     font-size: .925rem;
   }
 
+  body {
+    justify-content: flex-start;
+    background-color: white;
+  }
+
   main {
-    padding: 1.25rem;
-    padding-bottom: 0rem;
+    border: none;
+    margin: 0;
+    width: 100%;
+    flex-grow: 1;
   }
 
   ul>li>a>span {
@@ -182,7 +197,6 @@ small {
   ul>li>a>small {
     font-size: .925rem;
   }
-
 
   h1,
   p,
