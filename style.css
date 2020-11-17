@@ -63,7 +63,7 @@ ul {
   list-style: none;
 }
 
-ul>li>a {
+ul a {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -75,11 +75,11 @@ ul>li>a {
   cursor: pointer;
 }
 
-ul>li:last-of-type {
+ul li:last-of-type {
   border-bottom: 1px solid;
 }
 
-ul>li>a:hover {
+ul a:hover {
   background-color: #E7FB47;
 }
 
@@ -154,7 +154,7 @@ small {
     max-width: 100%;
   }
 
-  ul>li>a:hover {
+  ul a:hover {
     background-color: #E8EBF1;
   }
 
@@ -189,11 +189,11 @@ small {
     flex-grow: 1;
   }
 
-  ul>li>a>span {
+  ul a span {
     display: none;
   }
 
-  ul>li>a>small {
+  ul a small {
     font-size: .925rem;
   }
 
