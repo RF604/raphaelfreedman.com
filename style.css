@@ -90,8 +90,7 @@ aside img {
   width: calc(50vw - 4rem);
   padding: 0 2rem;
   object-fit: contain;
-
-  transition: opacity 1s ease-in-out;
+  transition: .15s background-color ease-in-out;
 }
 
 ::selection {
