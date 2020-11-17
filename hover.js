@@ -4,8 +4,10 @@ let imagelinks = document.querySelectorAll('.imagelink')
 
 imagelinks.forEach(link => {
 
+if (window.innerWidth > 1152) {
 let preload = new Image()
 preload.src = link.getAttribute('data-image')
+}
 
 link.addEventListener("mouseenter", function() {
     let photo = this.getAttribute('data-image');
