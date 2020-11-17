@@ -4,7 +4,7 @@ let imagelinks = document.querySelectorAll('.imagelink')
 
 imagelinks.forEach(link => {
 
-if (window.innerWidth > 1152) {
+if (window.innerWidth > 1150) {
 let preload = new Image()
 preload.src = link.getAttribute('data-image')
 }
