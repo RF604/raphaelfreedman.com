@@ -131,47 +131,7 @@ small {
 }
 
 
-@media all and (max-width: 72rem),(max-height: 40rem) {
-
-  body {
-      flex-direction: column;
-      justify-content: center;
-      background-color: #3A5745;
-    }
-
-  main {
-    width: calc(100% - 4rem);
-    padding: min(2rem, 4vw);
-    margin: 2rem;
-    flex-grow: 0;
-    border: 2px solid;
-    border-radius: 1.5rem;
-    background-color: white;
-  }
-
-  section {
-    margin-bottom: 2rem;
-    max-width: 100%;
-  }
-
-  ul a:hover {
-    background-color: #E8EBF1;
-  }
-
-  section:last-of-type {
-    margin-bottom: 0;
-  }
-
-  aside {
-    display: none;
-  }
-
-  h1 {
-    margin-bottom: .65rem;
-  }
-}
-
-@media all and (max-width: 35rem) {
+@media all and (max-width: 72rem) {
 
   html {
     font-size: .925rem;
@@ -186,7 +146,21 @@ small {
     border: none;
     margin: 0;
     width: 100%;
+    padding: min(2rem, 4vw);
     flex-grow: 1;
+  }
+
+  aside {
+    display: none;
+  }
+
+  section {
+    margin-bottom: 2rem;
+    max-width: 100%;
+  }
+
+  ul a:hover {
+    background-color: #E8EBF1;
   }
 
   ul a span {
@@ -205,10 +179,15 @@ small {
     text-align: left;
   }
 
+  h1 {
+    margin-bottom: .65rem;
+  }
+
   section:last-of-type {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+    margin-bottom: 0;
   }
 
   section:last-of-type span {
@@ -219,7 +198,6 @@ small {
   section:last-of-type small {
     padding-top: .5rem;
   }
-
 
 }
 
