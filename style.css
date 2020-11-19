@@ -91,6 +91,11 @@ aside img {
   padding: 0 2rem;
   object-fit: contain;
   transition: .15s background-color ease-in-out;
+
+  background-image: url(/images/sutro.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 ::selection {
@@ -131,7 +136,7 @@ small {
 }
 
 
-@media all and (max-width: 72rem) {
+@media all and (max-width: 72rem),(max-height: 40rem)  {
 
   html {
     font-size: .925rem;
@@ -146,6 +151,7 @@ small {
     border: none;
     margin: 0;
     width: 100%;
+    max-width: 80rem;
     padding: min(2rem, 4vw);
     flex-grow: 1;
   }
