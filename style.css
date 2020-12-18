@@ -123,6 +123,8 @@ p a {
 
 p span {
   text-decoration: line-through;
+  text-decoration-thickness: .12rem;
+  text-decoration-color: #578767;
 }
 
 p:hover span {
@@ -161,10 +163,6 @@ small {
   section {
     margin-bottom: 2rem;
     max-width: 100%;
-  }
-
-  ul a:hover {
-    background-color: #E8EBF1;
   }
 
   ul a span {
