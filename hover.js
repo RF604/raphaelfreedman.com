@@ -9,7 +9,6 @@ if (window.innerWidth > 1150) {
     let preload = new Image()
     preload.src = link.getAttribute('data-image')
 
-
     link.addEventListener("mouseenter", function() {
       let photo = this.getAttribute('data-image');
       photocontainer.src = photo;

@@ -71,6 +71,7 @@ ul li:last-of-type {
 ul a:hover {
   background-color: #E7FB47;
   background-color: #578767;
+  background-color: #E5E7E5;
 }
 
 aside img {
@@ -136,7 +137,7 @@ small {
 }
 
 
-@media all and (max-width: 72rem),(max-height: 40rem)  {
+@media all and (max-width: 72rem),(max-height: 40rem) {
 
   html {
     font-size: .925rem;
