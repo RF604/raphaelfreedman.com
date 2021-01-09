@@ -69,8 +69,6 @@ ul li:last-of-type {
 }
 
 ul a:hover {
-  background-color: #E7FB47;
-  background-color: #578767;
   background-color: #E5E7E5;
 }
 
@@ -210,11 +208,19 @@ small {
   }
 
   ::selection {
-    color: black;
-    background: #B3C4DE;
+    background: black;
   }
 
-  img {
-    background-color: #B3C4DE;
+  p span {
+    text-decoration: none;
   }
+
+  ul a:hover {
+    background-color: black;
+  }
+
+  aside img {
+    background-color: transparent !important;
+  }
+
 }
