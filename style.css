@@ -40,7 +40,7 @@ main {
   border-right: 1px solid;
 }
 
-section  {
+section {
   width: 100%;
   max-width: 42rem;
   margin-bottom: 2rem;
@@ -80,7 +80,6 @@ aside img {
   padding: 0 2rem;
   object-fit: contain;
   transition: .15s background-color ease-in-out;
-
   background-image: url(/images/sutro.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -134,9 +133,7 @@ small {
   font-size: 0.8rem;
 }
 
-
-@media all and (max-width: 72rem),(max-height: 40rem) {
-
+@media all and (max-width: 72rem), (max-height: 40rem) {
   html {
     font-size: .925rem;
   }
@@ -195,16 +192,15 @@ small {
     flex-direction: column-reverse;
     margin-bottom: 0;
   }
-
 }
 
 @media (prefers-color-scheme: dark) {
   html {
-    background-color: #28272B;
+    background-color: #212121;
   }
 
   * {
-    color: #E8EBF1;
+    color: #E4E4E4;
   }
 
   ::selection {
@@ -222,5 +218,4 @@ small {
   aside img {
     background-color: transparent !important;
   }
-
 }
