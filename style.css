@@ -69,7 +69,7 @@ ul li:last-of-type {
 }
 
 ul a:hover {
-  background-color: #E5E7E5;
+  background-color: #E5E5E5;
 }
 
 aside img {
@@ -87,9 +87,7 @@ aside img {
 }
 
 ::selection {
-  background: #E7FB47;
-  background-color: black;
-  color: white;
+  background: #E5E5E5;
 }
 
 h1,

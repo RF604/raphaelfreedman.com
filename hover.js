@@ -12,7 +12,7 @@ if (window.innerWidth > 1150) {
     link.addEventListener("mouseenter", function() {
       let photo = this.getAttribute('data-image');
       photocontainer.src = photo;
-      photocontainer.style.backgroundColor = '#E5E7E5';
+      photocontainer.style.backgroundColor = '#E5E5E5';
       photocontainer.style.backgroundImage = 'none';
       event.stopPropagation()
     })
