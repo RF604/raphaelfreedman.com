@@ -3,6 +3,7 @@
 * {
   box-sizing: border-box;
   color: black;
+  color: rgb(44, 56, 41);
 }
 
 html {
@@ -44,6 +45,10 @@ section {
   width: 100%;
   max-width: 42rem;
   margin-bottom: 2rem;
+}
+
+section p:first-of-type {
+  margin-bottom: .5rem;
 }
 
 ul {
@@ -117,16 +122,6 @@ p a {
   text-decoration: underline;
 }
 
-p span {
-  text-decoration: line-through;
-  text-decoration-thickness: .12rem;
-  text-decoration-color: #578767;
-}
-
-p:hover span {
-  text-decoration: none;
-}
-
 small {
   font-size: 0.8rem;
 }
@@ -145,7 +140,6 @@ small {
     border: none;
     margin: 0;
     width: 100%;
-    max-width: 80rem;
     padding: min(2rem, 4vw);
     flex-grow: 1;
   }
@@ -179,11 +173,6 @@ small {
     margin-bottom: .65rem;
   }
 
-  p span {
-    display: block;
-    margin-bottom: .5rem;
-  }
-
   section:last-of-type {
     display: flex;
     flex-grow: 1;
@@ -203,10 +192,6 @@ small {
 
   ::selection {
     background: black;
-  }
-
-  p span {
-    text-decoration: none;
   }
 
   ul a:hover {

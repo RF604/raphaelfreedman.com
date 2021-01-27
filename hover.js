@@ -1,5 +1,5 @@
 
-let photocontainer = document.querySelector("aside img")
+let photocontainer = document.querySelector('aside img')
 let imagelinks = document.querySelectorAll('.imagelink')
 
 if (window.innerWidth > 1150) {
