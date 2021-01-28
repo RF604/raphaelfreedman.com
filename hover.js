@@ -20,7 +20,7 @@ if (window.innerWidth > 1150) {
     })
 
     link.addEventListener("mouseleave", function() {
-      photocontainer.src = '/images/sutro.png';
+      photocontainer.setAttribute("src", "/images/sutro.png")
       photocontainer.style.backgroundImage = 'none';
       photocontainer.classList.remove("hover");
       event.stopPropagation()
