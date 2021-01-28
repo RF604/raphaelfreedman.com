@@ -82,6 +82,7 @@ aside img {
   max-height: 38rem;
   width: calc(50vw - 4rem);
   padding: 0 2rem;
+  background-origin: content-box;
   object-fit: contain;
   background-image: url(/images/sutro.jpg);
   background-position: center;
@@ -93,7 +94,6 @@ aside img {
 
 aside img.hover {
   background-color: #E5E5E5;
-  background-image: none;
 }
 
 ::selection {
