@@ -2,8 +2,7 @@
 
 * {
   box-sizing: border-box;
-  color: black;
-  color: rgb(44, 56, 41);
+  color: #2c3829;
 }
 
 html {
@@ -48,7 +47,7 @@ section {
 }
 
 section p:first-of-type {
-  margin-bottom: .5rem;
+  margin-bottom: .75rem;
 }
 
 ul {
@@ -63,7 +62,7 @@ ul a {
   align-items: baseline;
   border-top: 1px solid;
   margin: 0;
-  padding: 0.5rem 0;
+  padding: .75rem 0;
   transition: .15s ease-in-out;
   transition-property: background-color;
   cursor: pointer;
@@ -105,7 +104,6 @@ small {
   text-rendering: optimizeLegibility;
   font-kerning: normal;
   text-decoration: none;
-  text-align: justify;
   line-height: 1.4;
   font-weight: 350;
   font-size: 1rem;
@@ -114,8 +112,8 @@ small {
 h1 {
   font-weight: 600;
   font-size: 1.2rem;
-  line-height: .8;
-  margin-bottom: .6rem;
+  line-height: 1;
+  margin-bottom: .85rem;
 }
 
 p a {
@@ -148,7 +146,6 @@ small {
   }
 
   section {
-    margin-bottom: 2rem;
     max-width: 100%;
   }
 
@@ -158,18 +155,6 @@ small {
 
   ul a small {
     font-size: .925rem;
-  }
-
-  h1,
-  p,
-  a,
-  span,
-  small {
-    text-align: left;
-  }
-
-  h1 {
-    margin-bottom: .65rem;
   }
 
   section:last-of-type {
