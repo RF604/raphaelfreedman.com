@@ -83,11 +83,17 @@ aside img {
   width: calc(50vw - 4rem);
   padding: 0 2rem;
   object-fit: contain;
-  transition: .15s background-color ease-in-out;
   background-image: url(/images/sutro.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+  background-color: white;
+  transition: .15s background-color ease-in-out;
+}
+
+aside img.hover {
+  background-color: #E5E5E5;
+  background-image: none;
 }
 
 ::selection {
