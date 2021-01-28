@@ -34,6 +34,7 @@ aside {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition: .15s background-color ease-in-out;
 }
 
 main {
@@ -88,11 +89,9 @@ aside img {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  background-color: white;
-  transition: .15s background-color ease-in-out;
 }
 
-aside img.hover {
+aside.hover {
   background-color: #E5E5E5;
 }
 
@@ -188,7 +187,7 @@ small {
     background-color: black;
   }
 
-  aside img {
-    background-color: transparent !important;
+  aside.hover {
+    background-color: black;
   }
 }

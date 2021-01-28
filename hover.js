@@ -1,5 +1,5 @@
 
-
+let aside = document.querySelector('aside')
 let photocontainer = document.querySelector('aside img')
 let imagelinks = document.querySelectorAll('.imagelink')
 
@@ -15,14 +15,14 @@ if (window.innerWidth > 1150) {
       let background = this.getAttribute('data-background');
       photocontainer.src = photo;
       photocontainer.style.backgroundImage = `url(${background})`;
-      photocontainer.classList.add("hover");
+      aside.classList.add("hover");
       event.stopPropagation()
     })
 
     link.addEventListener("mouseleave", function() {
-      photocontainer.setAttribute("src", "/images/sutro.png")
+      photocontainer.setAttribute("src", "/images/sutro.png");
       photocontainer.style.backgroundImage = 'none';
-      photocontainer.classList.remove("hover");
+      aside.classList.remove("hover");
       event.stopPropagation()
     })
 
