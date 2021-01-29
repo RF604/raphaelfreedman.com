@@ -130,10 +130,7 @@ small {
 }
 
 @media all and (max-width: 72rem), (max-height: 40rem) {
-  html {
-    font-size: .925rem;
-  }
-
+  
   body {
     justify-content: flex-start;
   }
