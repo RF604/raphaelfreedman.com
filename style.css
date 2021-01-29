@@ -130,7 +130,6 @@ small {
 }
 
 @media all and (max-width: 72rem), (max-height: 40rem) {
-  
   body {
     justify-content: flex-start;
   }
@@ -177,14 +176,11 @@ small {
   }
 
   ::selection {
-    background: black;
+    background: #2F2F2F;
   }
 
-  ul a:hover {
-    background-color: black;
-  }
-
+  ul a:hover,
   aside.hover {
-    background-color: black;
+    background-color: #2F2F2F;
   }
 }
