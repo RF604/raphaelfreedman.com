@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@350;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:wght@300;500&display=swap');
 
 * {
   box-sizing: border-box;
   color: #2c3829;
+  font-family: 'Newsreader', serif;
 }
 
 html {
@@ -11,84 +12,79 @@ html {
   margin: 0;
   padding: 0;
   -webkit-text-size-adjust: 100%;
-  font-size: 16px;
-  font-family: 'Work Sans', sans-serif;
+  font-size: 18px;
+  cursor: url(/images/cursor.svg), auto;
 }
 
 body {
-  margin: 0 auto;
   width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: min(2rem, 4vw);
   overflow-x: hidden;
-  min-height: 100%;
-  padding: 0;
-  display: flex;
-  justify-content: space-between;
-}
-
-main,
-aside {
-  width: 50vw;
-  padding: 2rem;
-  flex-grow: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  transition: .15s background-color ease-in-out;
 }
 
 main {
-  border-right: 1px solid;
+  max-width: 32rem;
 }
 
-section {
+main section:first-of-type {
   width: 100%;
-  max-width: 42rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 section p:first-of-type {
-  margin-bottom: .75rem;
+  margin-bottom: .5rem;
 }
 
 ul {
-  margin: 0;
+  display: inline;
   padding: 0;
   list-style: none;
 }
 
-ul a {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  border-top: 1px solid;
-  margin: 0;
-  padding: .75rem 0;
-  transition: .15s ease-in-out;
-  transition-property: background-color;
-  cursor: pointer;
+ul li {
+  display: inline;
 }
 
-ul li:last-of-type {
-  border-bottom: 1px solid;
+ul li:after {
+  content: ", ";
 }
 
-ul a:hover {
-  background-color: #E5E5E5;
+ul li:last-child::after {
+  content: ".";
+}
+
+ul li a {
+  white-space: nowrap;
+  cursor: url(/images/hover-cursor.svg), auto;
+}
+
+ul li a:hover {
+  text-decoration: underline;
+}
+
+aside {
+  flex-grow: 1;
+  width: 50vw;
+  max-width: 100%;
+  margin-top: 2rem;
+  transition: .15s background-color ease-in-out;
 }
 
 aside img {
-  position: absolute;
   height: 100%;
-  max-height: 38rem;
-  width: calc(50vw - 4rem);
-  padding: 0 2rem;
+  width: 100%;
+  padding: 1rem;
   background-origin: content-box;
   object-fit: contain;
-  background-image: url(/images/sutro.jpg);
+  background-image: ;
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+  visibility: hidden;
 }
 
 aside.hover {
@@ -101,68 +97,39 @@ aside.hover {
 
 h1,
 p,
-a,
-span,
-small {
+a {
   padding: 0;
   margin: 0;
   text-rendering: optimizeLegibility;
   font-kerning: normal;
   text-decoration: none;
   line-height: 1.4;
-  font-weight: 350;
+  font-weight: 300;
   font-size: 1rem;
 }
 
 h1 {
-  font-weight: 600;
-  font-size: 1.2rem;
-  line-height: 1;
-  margin-bottom: .85rem;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.25;
+  margin-bottom: .5rem;
 }
 
-p a {
-  text-decoration: underline;
-}
-
-small {
-  font-size: 0.8rem;
-}
-
-@media all and (max-width: 72rem), (max-height: 40rem) {
-  body {
-    justify-content: flex-start;
+@media all and (max-width: 76rem) {
+  aside {
+    width: 34rem;
   }
+}
 
-  main {
-    border: none;
-    margin: 0;
-    width: 100%;
-    padding: min(2rem, 4vw);
-    flex-grow: 1;
-  }
-
+@media all and (max-width: 32rem), (max-height: 45rem) {
   aside {
     display: none;
   }
+}
 
-  section {
-    max-width: 100%;
-  }
-
-  ul a span {
-    display: none;
-  }
-
-  ul a small {
-    font-size: .925rem;
-  }
-
-  section:last-of-type {
-    display: flex;
-    flex-grow: 1;
-    flex-direction: column-reverse;
-    margin-bottom: 0;
+@media all and (max-width: 24rem) {
+  ul li a {
+    white-space: normal;
   }
 }
 
@@ -179,7 +146,6 @@ small {
     background: #2F2F2F;
   }
 
-  ul a:hover,
   aside.hover {
     background-color: #2F2F2F;
   }
