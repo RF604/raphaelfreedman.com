@@ -24,6 +24,7 @@ body {
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 main {
@@ -68,16 +69,17 @@ ul li a:hover {
 
 aside {
   flex-grow: 1;
-  width: 50vw;
-  max-width: 100%;
   margin-top: 2rem;
+  height: 0;
+  max-height: 35rem;
+  max-width: 50rem;
   transition: .15s background-color ease-in-out;
 }
 
 aside img {
   height: 100%;
   width: 100%;
-  padding: 1rem;
+  padding: 2rem;
   background-origin: content-box;
   object-fit: contain;
   background-image: ;
@@ -117,7 +119,7 @@ h1 {
 
 @media all and (max-width: 76rem) {
   aside {
-    width: 34rem;
+    width: 100%;
   }
 }
 
