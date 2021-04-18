@@ -20,7 +20,7 @@ body {
   width: 100%;
   height: 100%;
   margin: 0;
-  padding: min(2rem, 4vw);
+  padding: 2rem;
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
@@ -99,6 +99,7 @@ aside.hover {
 
 h1,
 p,
+ul,
 a {
   padding: 0;
   margin: 0;
@@ -127,13 +128,46 @@ h1 {
   aside {
     display: none;
   }
+
+  body {
+    padding: 1rem;
+  }
+
+  ul {
+    display: inline;
+    padding: 0;
+    list-style-position: inside;
+    list-style-type: lower-roman;
+  }
+  ul li {
+    display: list-item;
+    padding: 0 0 .15rem 0;
+  }
+  ul li a {
+    position: absolute;
+    left: 2.525rem;
+    max-width: calc(100vw - 4.1rem);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  ul li:after {
+    content: "";
+  }
+  ul li:last-child::after {
+    content: "";
+  }
+
+  main:after {
+    content: "© 2021";
+    font-size: .78rem;
+    font-weight: 300;
+    position: absolute;
+    bottom: 1rem;
+  }
+
 }
 
-@media all and (max-width: 24rem) {
-  ul li a {
-    white-space: normal;
-  }
-}
 
 @media (prefers-color-scheme: dark) {
   html {
