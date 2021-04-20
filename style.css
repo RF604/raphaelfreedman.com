@@ -1,9 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Newsreader:wght@300;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amethysta&display=swap');
+
+@font-face {
+    font-family: 'Standard';
+    src:
+      url('standard-book-webfont.woff2') format('woff2'),
+      url('standard-book-webfont.woff') format('woff');
+    font-style: normal;
+    font-display: swap;
+  }
 
 * {
   box-sizing: border-box;
   color: #2c3829;
-  font-family: 'Newsreader', serif;
+  font-family: 'Amethysta', serif;
 }
 
 html {
@@ -12,7 +21,7 @@ html {
   margin: 0;
   padding: 0;
   -webkit-text-size-adjust: 100%;
-  font-size: 18px;
+  font-size: 20px;
   cursor: url(/images/cursor.svg), auto;
 }
 
@@ -30,14 +39,12 @@ body {
 main {
   max-width: 30rem;
   margin: 0 auto;
-  background-color: ;
 }
 
-main section:first-of-type {
+main section {
   width: 100%;
-  margin-bottom: 1.5rem;
+  margin-bottom: .8rem;
 }
-
 section p:first-of-type {
   margin-bottom: .5rem;
 }
@@ -49,24 +56,20 @@ ul {
 }
 
 ul li {
-  display: inline;
-}
+  display: inline-flex;
+  align-items: center;
 
-ul li:after {
-  content: ", ";
+  border: 1px solid;
+  padding: .24rem .3rem .15rem .3rem;
+  margin-bottom: .1rem;
+  border-radius: .2rem;
 }
-
-ul li:last-child::after {
-  content: ".";
-}
-
 ul li a {
   white-space: nowrap;
-  cursor: url(/images/hover-cursor.svg), auto;
+  cursor: url(/images/cursor.svg), auto;
 }
-
-ul li a:hover {
-  text-decoration: underline;
+ul li:hover {
+  background-color: #E5E5E5;
 }
 
 aside {
@@ -77,10 +80,7 @@ aside {
   max-width: 50rem;
   max-width: 36rem;
   transition: .15s background-color ease-in-out;
-
-  background-color: ;
 }
-
 aside img {
   height: 100%;
   width: 100%;
@@ -93,7 +93,6 @@ aside img {
   background-size: contain;
   visibility: hidden;
 }
-
 aside.hover {
   background-color: #E5E5E5;
 }
@@ -111,16 +110,22 @@ a {
   text-rendering: optimizeLegibility;
   font-kerning: normal;
   text-decoration: none;
-  line-height: 1.4;
-  font-weight: 300;
+  line-height: 1.25;
   font-size: 1rem;
+
+  font-family: 'Amethysta', serif;
+}
+
+ul li a {
+  font-family: 'Standard', sans-serif;
+  font-size: .5rem;
+  text-transform: uppercase;
 }
 
 h1 {
-  font-weight: 500;
   font-size: 1rem;
-  line-height: 1.25;
-  margin-bottom: .5rem;
+  line-height: 1;
+  margin-bottom: 1rem;
 }
 
 @media all and (max-width: 76rem) {
@@ -151,6 +156,9 @@ h1 {
   ul li {
     display: list-item;
     padding: 0 0 .15rem 0;
+
+    border: none;
+    margin: 0;
   }
   ul li a {
     position: absolute;
@@ -159,12 +167,10 @@ h1 {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-  }
-  ul li:after {
-    content: "";
-  }
-  ul li:last-child::after {
-    content: "";
+
+    font-size: 1rem;
+    text-transform: none;
+    font-family: 'Amethysta', serif;
   }
 
   main:after {
@@ -176,7 +182,6 @@ h1 {
   }
 
 }
-
 
 @media (prefers-color-scheme: dark) {
   html {
