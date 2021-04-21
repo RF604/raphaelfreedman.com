@@ -137,8 +137,6 @@ ul li a {
   text-transform: uppercase;
 }
 
-
-
 @media all and (max-width: 76rem) {
   aside {
     width: 100%;
