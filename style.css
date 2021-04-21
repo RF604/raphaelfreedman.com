@@ -1,18 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Amethysta&display=swap');
+@font-face {
+  font-family: 'Standard';
+  src:
+    url('standard-book-webfont.woff2') format('woff2'),
+    url('standard-book-webfont.woff') format('woff');
+  font-style: normal;
+  font-display: swap;
+}
 
 @font-face {
-    font-family: 'Standard';
-    src:
-      url('standard-book-webfont.woff2') format('woff2'),
-      url('standard-book-webfont.woff') format('woff');
-    font-style: normal;
-    font-display: swap;
-  }
+  font-family: 'Ortica';
+  src:
+    url('Ortica-Light.woff2') format('woff2'),
+    url('Ortica-Light.woff') format('woff');
+  font-style: normal;
+  font-display: swap;
+}
 
 * {
   box-sizing: border-box;
   color: #2c3829;
-  font-family: 'Amethysta', serif;
+  font-family: 'Ortica', serif;
 }
 
 html {
@@ -21,15 +28,15 @@ html {
   margin: 0;
   padding: 0;
   -webkit-text-size-adjust: 100%;
-  font-size: 20px;
-  cursor: url(/images/cursor.svg), auto;
+  font-size: 23px;
+  cursor: url(images/cursor.svg), auto;
 }
 
 body {
   width: 100%;
   height: 100%;
   margin: 0;
-  padding: 4.5rem 2rem 3rem 2rem;
+  padding: 3.5rem 2rem 3rem 2rem;
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
@@ -37,7 +44,7 @@ body {
 }
 
 main {
-  max-width: 30rem;
+  max-width: 28rem;
   margin: 0 auto;
 }
 
@@ -45,6 +52,7 @@ main section {
   width: 100%;
   margin-bottom: .8rem;
 }
+
 section p:first-of-type {
   margin-bottom: .5rem;
 }
@@ -58,16 +66,17 @@ ul {
 ul li {
   display: inline-flex;
   align-items: center;
-
   border: 1px solid;
   padding: .24rem .3rem .15rem .3rem;
   margin-bottom: .1rem;
   border-radius: .2rem;
 }
+
 ul li a {
   white-space: nowrap;
-  cursor: url(/images/cursor.svg), auto;
+  cursor: url(images/cursor.svg), auto;
 }
+
 ul li:hover {
   background-color: #E5E5E5;
 }
@@ -81,6 +90,7 @@ aside {
   max-width: 36rem;
   transition: .15s background-color ease-in-out;
 }
+
 aside img {
   height: 100%;
   width: 100%;
@@ -93,6 +103,7 @@ aside img {
   background-size: contain;
   visibility: hidden;
 }
+
 aside.hover {
   background-color: #E5E5E5;
 }
@@ -112,8 +123,7 @@ a {
   text-decoration: none;
   line-height: 1.25;
   font-size: 1rem;
-
-  font-family: 'Amethysta', serif;
+  font-family: 'Ortica', serif;
 }
 
 ul li a {
@@ -126,6 +136,7 @@ h1 {
   font-size: 1rem;
   line-height: 1;
   margin-bottom: 1rem;
+  font-weight: 800;
 }
 
 @media all and (max-width: 76rem) {
@@ -153,13 +164,14 @@ h1 {
     list-style-position: inside;
     list-style-type: lower-roman;
   }
+
   ul li {
     display: list-item;
     padding: 0 0 .15rem 0;
-
     border: none;
     margin: 0;
   }
+
   ul li a {
     position: absolute;
     left: 2.525rem;
@@ -167,10 +179,9 @@ h1 {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-
     font-size: 1rem;
     text-transform: none;
-    font-family: 'Amethysta', serif;
+    font-family: 'Ortica', serif;
   }
 
   main:after {
@@ -180,7 +191,6 @@ h1 {
     position: absolute;
     bottom: 1rem;
   }
-
 }
 
 @media (prefers-color-scheme: dark) {
