@@ -8,6 +8,17 @@
 }
 
 @font-face {
+  font-family: 'Standard Bold';
+  src:
+    url('standard-book-webfont.woff2') format('woff2'),
+    url('standard-book-webfont.woff') format('woff'),
+    url('standard-bold-webfont.woff2') format('woff2'),
+    url('standard-bold-webfont.woff') format('woff');
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: 'Ortica';
   src:
     url('Ortica-Light.woff2') format('woff2'),
@@ -27,12 +38,6 @@ html {
   padding: 0;
   height: 100%;
   width: 100%;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
   cursor: url(images/cursor.svg), auto;
   font-family: 'Ortica', serif;
   font-size: 18px;
@@ -44,26 +49,24 @@ html {
 }
 
 body {
-  padding: 1rem;
+  padding: 4rem 1rem 2rem 1rem;
+  margin: 0;
   height: 100%;
-
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
 main {
-  width: 100%;
   max-width: 29rem;
-
-  padding-bottom: 25vh;
+  margin-bottom: 2rem;
 }
 
 main section {
   width: 100%;
   margin-bottom: .8rem;
 }
+
 section p:first-of-type {
   margin-bottom: .5rem;
 }
@@ -74,14 +77,17 @@ ul {
   margin: 0;
   list-style: none;
 }
+
 ul li {
   display: inline-flex;
   align-items: center;
   padding-bottom: .21rem;
 }
+
 ul li:last-of-type {
   padding-bottom: 0;
 }
+
 ul li a {
   white-space: nowrap;
   border: 1px solid;
@@ -89,23 +95,27 @@ ul li a {
   border-radius: .2rem;
   cursor: url(images/cursor.svg), auto;
 }
+
 li:hover,
 li:hover a {
   color: blue;
 }
 
 aside {
-  z-index: -1;
-  position: absolute;
-  transform: translate(20vw, 20vh);
-  width: min(32rem, 60vmin);
+  height: 0;
+  flex-grow: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transition: .15s background-color ease-in-out;
   border: 1px dashed transparent;
 }
 
 aside img {
-  width: 100%;
   height: 100%;
+  width: auto;
+  max-width: 100%;
   padding: 2rem;
   background-origin: content-box;
   object-fit: contain;
@@ -115,27 +125,33 @@ aside img {
   background-size: contain;
   visibility: hidden;
 }
-aside.hover {
+
+aside.hover img {
   background-color: lightgray;
 }
 
 ::selection {
   background: #E5E5E5;
 }
+
 h1,
 p {
   padding: 0;
   margin: 0;
 }
+
 h1 {
-  font-size: 2rem;
+  font-size: 1.75rem;
   line-height: 1;
   margin-bottom: 1rem;
   font-weight: 600;
 }
+
 p {
-  font-size: 1.2rem;
+  font-size: .9rem;
+  font-family: 'Standard';
 }
+
 ul li a {
   font-family: 'Standard', sans-serif;
   font-size: .6rem;
@@ -143,19 +159,55 @@ ul li a {
   text-transform: uppercase;
 }
 
+@media all and (max-height: 46rem) {
+  body {
+    flex-direction: row;
+    justify-content: center;
+    padding: 4rem 2rem;
+  }
 
-@media all and (max-height: 32rem), (max-width: 42rem) {
+  main {
+    margin-right: 4rem;
+  }
 
+  aside {
+    height: 100%;
+    max-width: 60rem;
+  }
+}
+
+@media all and (max-height: 46rem) and (max-width: 55rem) {
   html {
     align-items: flex-start;
   }
 
   body {
     justify-content: flex-start;
+    padding: 1.5rem 1rem 1rem 1rem;
   }
 
-  main {
-    padding-bottom: 1rem;
+  main:after {
+    content: "© 2021";
+    font-size: .7rem;
+    font-weight: 300;
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+  }
+
+  aside {
+    display: none;
+  }
+}
+
+@media all and (max-height: 30rem), (max-width: 36rem) {
+  html {
+    align-items: flex-start;
+  }
+
+  body {
+    justify-content: flex-start;
+    padding: 1.5rem 1rem 1rem 1rem;
   }
 
   main:after {
