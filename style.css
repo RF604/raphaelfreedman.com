@@ -162,6 +162,10 @@ ul li a {
     justify-content: flex-start;
   }
 
+  ul li {
+    padding: 0 .21rem .42rem 0;
+  }
+
   h1 {
     text-align: left;
   }
