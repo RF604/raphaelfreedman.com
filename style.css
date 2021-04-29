@@ -59,7 +59,7 @@ ul li {
 ul li a {
   white-space: nowrap;
   border: 1px solid;
-  padding: .15rem .3rem .15rem .3rem;
+  padding: .18rem .3rem .16rem .3rem;
   border-radius: .2rem;
   cursor: url(images/cursor.svg), auto;
 }
