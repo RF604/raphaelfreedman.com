@@ -120,6 +120,7 @@ h1 {
 
 p {
   text-align: justify;
+  text-align-last: justify;
   font-size: 1rem;
   font-weight: 350;
 }
@@ -148,7 +149,7 @@ ul li a {
   }
 }
 
-@media all and (max-height: 46rem) and (max-width: 55rem), (max-height: 30rem), (max-width: 36rem) {
+@media all and (max-height: 46rem) and (max-width: 55rem), (max-height: 30rem), (max-width: 40rem) {
   html {
     align-items: flex-start;
   }
@@ -168,6 +169,10 @@ ul li a {
 
   h1 {
     text-align: left;
+  }
+
+  p {
+    text-align-last: left;
   }
 
   main:after {
