@@ -8,17 +8,6 @@
 }
 
 @font-face {
-  font-family: 'Standard Bold';
-  src:
-    url('standard-book-webfont.woff2') format('woff2'),
-    url('standard-book-webfont.woff') format('woff'),
-    url('standard-bold-webfont.woff2') format('woff2'),
-    url('standard-bold-webfont.woff') format('woff');
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
   font-family: 'Ortica';
   src:
     url('Ortica-Light.woff2') format('woff2'),
@@ -39,7 +28,7 @@ html {
   height: 100%;
   width: 100%;
   cursor: url(images/cursor.svg), auto;
-  font-family: 'Ortica', serif;
+  font-family: 'Standard', Helvetica, sans-serif;
   font-size: 18px;
   font-weight: 100;
   -webkit-text-size-adjust: 100%;
@@ -141,20 +130,19 @@ p {
 }
 
 h1 {
-  font-size: 1.75rem;
+  font-size: 1.33rem;
   line-height: 1;
   margin-bottom: 1rem;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 p {
   font-size: .9rem;
-  font-family: 'Standard';
 }
 
 ul li a {
   font-family: 'Standard', sans-serif;
-  font-size: .6rem;
+  font-size: .563rem;
   letter-spacing: .005rem;
   text-transform: uppercase;
 }
@@ -207,6 +195,7 @@ ul li a {
 
   body {
     justify-content: flex-start;
+    align-items: flex-start;
     padding: 1.5rem 1rem 1rem 1rem;
   }
 
