@@ -1,4 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@350;375&display=swap');
+@font-face {
+  font-family: 'Work Sans';
+  src: url('/WorkSans-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 * {
   box-sizing: border-box;
@@ -87,7 +92,6 @@ aside img {
   padding: 2rem;
   background-origin: content-box;
   object-fit: contain;
-  background-image: ;
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -120,7 +124,6 @@ h1 {
 
 p {
   text-align: justify;
-  text-align-last: justify;
   font-size: 1rem;
   font-weight: 350;
 }
