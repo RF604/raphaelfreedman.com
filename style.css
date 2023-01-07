@@ -185,7 +185,7 @@ ul li a {
   }
 
   main:after {
-    content: "© 2021";
+    content: "© 2023";
     font-size: .7rem;
     position: absolute;
     bottom: 1rem;
