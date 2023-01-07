@@ -1,12 +1,5 @@
 @font-face {
   font-family: 'Work Sans';
-  src: url('/fonts/WorkSans-ExtraLight.ttf') format('truetype');
-  font-weight: 200;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Work Sans';
   src: url('/fonts/WorkSans-Light.ttf') format('truetype');
   font-weight: 300;
   font-style: normal;
@@ -16,20 +9,6 @@
   font-family: 'Work Sans';
   src: url('/fonts/WorkSans-Regular.ttf') format('truetype');
   font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Work Sans';
-  src: url('/fonts/WorkSans-Medium.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Work Sans';
-  src: url('/fonts/WorkSans-SemiBold.ttf') format('truetype');
-  font-weight: 600;
   font-style: normal;
 }
 
@@ -47,7 +26,7 @@ html {
   cursor: url(images/cursor.svg), auto;
   font-family: 'Work Sans', sans-serif;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 300;
   -webkit-text-size-adjust: 100%;
   text-rendering: optimizeLegibility;
   font-kerning: normal;
@@ -154,13 +133,11 @@ p {
   text-align: justify;
   text-align-last: justify;
   font-size: 1rem;
-  font-weight: 300;
 }
 
 ul li a {
   font-size: .64rem;
   letter-spacing: .005rem;
-  font-weight: 300;
   text-transform: uppercase;
 }
 
@@ -210,7 +187,6 @@ ul li a {
   main:after {
     content: "© 2021";
     font-size: .7rem;
-    font-weight: 300;
     position: absolute;
     bottom: 1rem;
     left: 1rem;
