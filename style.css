@@ -110,8 +110,8 @@ body.dark button:hover {
   }
 }
 
-@media screen and (min-height: 25rem) {
+@media screen and (min-width: 30rem) and (min-height: 36rem) {
   main {
-    transform: translateY(-12%);
+    transform: translateY(-12vh);
   }
 }
