@@ -39,7 +39,7 @@ body {
 
 main {
   max-width: 32rem;
-  margin: 1.18rem;
+  margin: 1rem 1.12rem 1.12rem 1.12rem;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -50,7 +50,10 @@ span {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  margin-bottom: .85rem;
+}
+
+span:last-of-type {
+  margin-top: 3.94rem;
 }
 
 button {
@@ -67,9 +70,18 @@ button:hover {
   cursor: pointer;
 }
 
+section {
+  flex-grow: 1;
+  margin: .86rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 h1,
 p,
-a {
+a,
+small {
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
@@ -82,6 +94,11 @@ a {
 h1 {
   font-size: 1.563rem;
   letter-spacing: -.04rem;
+}
+
+small {
+  font-size: 0.8rem;
+  line-height: .85;
 }
 
 p:not(:first-of-type):not(:last-of-type) {
@@ -103,7 +120,8 @@ body.dark {
 body.dark p,
 body.dark h1,
 body.dark a,
-body.dark button {
+body.dark button,
+body.dark small {
   color: var(--PrimaryLightColor);
 }
 
@@ -124,6 +142,11 @@ body.dark button:hover {
   main {
     flex-grow: unset;
   }
+
+  span:last-of-type {
+    display: none;
+  }
+
 }
 
 @media screen and (min-width: 32rem) and (min-height: 36rem) {
