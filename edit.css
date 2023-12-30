@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Cardo&display=swap');
+
+:root {
+  --PrimaryDarkColor: #121212;
+  --PrimaryLightColor: #F1F1F1;
+  --HighlightColor: #e1ff00;
+  --PrimaryFont: 'Cardo', serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: var(--PrimaryDarkColor);
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-size: 12px;
+  font-size: clamp(12px, 4vw, 14px);
+  font-family: var(--PrimaryFont), sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color .2s ease-in-out;
+}
+
+main {
+  margin: min(2rem, 5vw);
+  margin-bottom: max(2rem, 16vh);
+  max-width: 46rem;
+}
+
+span {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: .6rem;
+  user-select: none;
+}
+
+button {
+  background-color: inherit;
+  border: .12rem solid;
+  width: .8rem;
+  height: .8rem;
+  border-radius: 50%;
+  transition: background-color 0.1s ease-in-out;
+}
+
+button:hover {
+  background-color: var(--HighlightColor);
+  cursor: pointer;
+}
+
+h1,
+p,
+a {
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  font-kerning: normal;
+  text-align: justify;
+  line-height: 1.15;
+}
+
+h1 {
+  font-size: 1.563rem;
+  letter-spacing: -.04rem;
+}
+
+p:not(:first-of-type):not(:last-of-type) {
+  margin: 0.6rem 0;
+}
+
+::selection {
+  background-color: var(--HighlightColor);
+}
+
+a:hover {
+  text-decoration-thickness: .1rem;
+}
+
+body.dark {
+  background-color: var(--PrimaryDarkColor);
+}
+
+body.dark p,
+body.dark h1,
+body.dark a,
+body.dark button {
+  color: var(--PrimaryLightColor);
+}
+
+body.dark button {
+  border-color: var(--PrimaryLightColor);
+  background-color: var(--PrimaryLightColor);
+}
+
+body.dark button:hover {
+  background-color: var(--HighlightColor);
+}
