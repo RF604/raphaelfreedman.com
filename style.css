@@ -84,6 +84,11 @@ p:not(:first-of-type):not(:last-of-type) {
   margin: 0.6rem 0;
 }
 
+p span {
+  display: inline;
+  font-style: italic;
+}
+
 ::selection {
   background-color: var(--HighlightColor);
 }
