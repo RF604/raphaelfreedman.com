@@ -102,6 +102,7 @@ body.dark {
 }
 
 body.dark p,
+body.dark p span,
 body.dark h1,
 body.dark a,
 body.dark button {
