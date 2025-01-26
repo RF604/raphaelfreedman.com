@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Cardo&display=swap');
 
 :root {
-  --PrimaryDarkColor: #121212;
+  --PrimaryDarkColor: #262626;
   --PrimaryLightColor: #F1F1F1;
-  --HighlightColor: #e1ff00;
+  --HighlightColor: #FF4F00;
   --PrimaryFont: 'Cardo', serif;
+  --TransitionSettings: .08s ease-in-out;
 }
 
 * {
@@ -13,107 +14,102 @@
   padding: 0;
   border: 0;
   color: var(--PrimaryDarkColor);
+  border-color: var(--PrimaryDarkColor);
+  transition: color var(--TransitionSettings), background-color var(--TransitionSettings), border-color var(--TransitionSettings);
 }
 
 html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
   height: -webkit-fill-available;
-  width: 100%;
-  font-size: clamp(12px, 4vw, 14px);
+  display: grid;
+  place-items: center;
+  font-size: clamp(14px, 5vw, 16px);
   font-family: var(--PrimaryFont), sans-serif;
 }
 
 body {
-  min-height: 100vh;
-  min-height: -webkit-fill-available;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  transition: background-color .2s ease-in-out;
+  max-width: 44rem;
+  margin: 0 0 14vh 0;
+  padding: 1.2rem;
 }
 
-main {
-  margin: min(2rem, 5vw);
-  margin-bottom: max(2rem, 16vh);
-  max-width: 46rem;
+header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  margin-bottom: 0.6rem;
 }
 
 span {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  margin-bottom: .6rem;
-  user-select: none;
+  flex: 1;
+  border: none;
+  border-bottom: 1px dotted var(--PrimaryDarkColor);
 }
 
 button {
-  background-color: inherit;
-  border: .12rem solid;
-  width: .8rem;
-  height: .8rem;
+  background-color: transparent;
+  border: 0.094rem solid;
+  width: 0.8rem;
+  height: 0.8rem;
   border-radius: 50%;
-  transition: background-color 0.1s ease-in-out;
+  cursor: pointer;
 }
 
 button:hover {
   background-color: var(--HighlightColor);
-  cursor: pointer;
 }
 
 h1,
 p,
-a {
+a,
+small {
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
-  -webkit-text-size-adjust: 100%;
   text-rendering: optimizeLegibility;
-  font-kerning: normal;
   text-align: justify;
   line-height: 1.15;
+  text-decoration: none;
+}
+
+::selection {
+  background-color: transparent;
+  color: var(--HighlightColor);
 }
 
 h1 {
   font-size: 1.563rem;
-  letter-spacing: -.04rem;
+  letter-spacing: -0.04rem;
 }
 
 p:not(:first-of-type):not(:last-of-type) {
   margin: 0.6rem 0;
 }
 
-p span {
-  display: inline;
+small {
+  font-size: x-small;
   font-style: italic;
 }
 
-::selection {
-  background-color: var(--HighlightColor);
-}
-
 a:hover {
-  text-decoration-thickness: .1rem;
+  color: var(--HighlightColor);
 }
 
-body.dark {
+.dark {
   background-color: var(--PrimaryDarkColor);
 }
 
-body.dark p,
-body.dark p span,
-body.dark h1,
-body.dark a,
-body.dark button {
+.dark * {
   color: var(--PrimaryLightColor);
+  border-color: var(--PrimaryLightColor);
 }
 
-body.dark button {
-  border-color: var(--PrimaryLightColor);
+.dark button {
+  background-color: var(--HighlightColor);
+}
+
+.dark button:hover {
   background-color: var(--PrimaryLightColor);
 }
 
-body.dark button:hover {
-  background-color: var(--HighlightColor);
+.dark a:hover {
+  color: var(--HighlightColor);
 }
